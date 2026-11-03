@@ -1,0 +1,9 @@
+/* Development builds only (imported from main.tsx): LXGW WenKai Medium for bold text, served
+ * from .dev-fonts/ by the dev server. A release fetches it on first use instead (B.3, P1). */
+@font-face {
+  font-family: "LXGW WenKai";
+  src: url("/dev-fonts/LXGWWenKai-Medium.ttf") format("truetype");
+  font-weight: 500 700;
+  font-style: normal;
+  font-display: swap;
+}

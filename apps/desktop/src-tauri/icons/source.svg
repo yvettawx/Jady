@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024">
+  <!-- Two 玦, jade rings with a slit, linked: green over white at the top, under it at the bottom.
+       The slits face outward so the crossings stay whole. -->
+  <defs>
+    <linearGradient id="tile" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a2925"/>
+      <stop offset="1" stop-color="#161513"/>
+    </linearGradient>
+    <linearGradient id="green" x1="268" y1="330" x2="578" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#bfe8cf"/>
+      <stop offset="0.45" stop-color="#5fae86"/>
+      <stop offset="1" stop-color="#1f5c45"/>
+    </linearGradient>
+    <linearGradient id="white" x1="452" y1="330" x2="762" y2="700" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#fbf8ef"/>
+      <stop offset="0.5" stop-color="#e3dcc8"/>
+      <stop offset="1" stop-color="#a99d80"/>
+    </linearGradient>
+    <clipPath id="lower">
+      <rect x="0" y="512" width="1024" height="512"/>
+    </clipPath>
+    <mask id="slit-green" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+      <rect width="1024" height="1024" fill="#fff"/>
+      <rect x="407" y="292" width="30" height="130" fill="#000" transform="rotate(-90 422 512)"/>
+    </mask>
+    <mask id="slit-white" maskUnits="userSpaceOnUse" x="0" y="0" width="1024" height="1024">
+      <rect width="1024" height="1024" fill="#fff"/>
+      <rect x="587" y="292" width="30" height="130" fill="#000" transform="rotate(90 602 512)"/>
+    </mask>
+  </defs>
+
+  <rect x="100" y="100" width="824" height="824" rx="185" fill="url(#tile)"/>
+
+  <g fill="none">
+    <!-- White ring, underneath. -->
+    <circle cx="602" cy="512" r="150" stroke="url(#white)" stroke-width="84" mask="url(#slit-white)"/>
+    <!-- Green ring on top, with a gap the colour of the tile. -->
+    <g mask="url(#slit-green)">
+      <circle cx="422" cy="512" r="150" stroke="#1f1e1b" stroke-width="112"/>
+      <circle cx="422" cy="512" r="150" stroke="url(#green)" stroke-width="84"/>
+    </g>
+    <!-- The white ring again over the lower crossing, so the two are linked. -->
+    <g clip-path="url(#lower)">
+      <g mask="url(#slit-white)">
+        <circle cx="602" cy="512" r="150" stroke="#1f1e1b" stroke-width="112"/>
+        <circle cx="602" cy="512" r="150" stroke="url(#white)" stroke-width="84"/>
+      </g>
+    </g>
+    <!-- Soft light along the upper edge of each ring. -->
+    <path d="M 281 461 A 150 150 0 0 1 371 371" stroke="#ffffff" stroke-opacity="0.35" stroke-width="10" stroke-linecap="round"/>
+    <path d="M 653 371 A 150 150 0 0 1 743 461" stroke="#ffffff" stroke-opacity="0.5" stroke-width="10" stroke-linecap="round"/>
+  </g>
+</svg>

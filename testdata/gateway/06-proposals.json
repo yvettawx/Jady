@@ -1,0 +1,20 @@
+{
+  "name": "proposals are queued, never applied",
+  "description": "propose_changes only adds to the review queue; invalid proposals are rejected; unknown tools do not exist.",
+  "authorized": false,
+  "steps": [
+    { "call": { "tool": "propose_changes",
+                "args": { "item_id": "n-002", "changes": [{ "field": "title", "new_value": "Renamed" }], "reason": "test" } },
+      "expect": { "ok": true, "proposal_queued": true, "contains": ["pending"] } },
+    { "call": { "tool": "read_item", "args": { "id": "n-002" } },
+      "expect": { "ok": true, "contains": ["Rust ownership summary"], "not_contains": ["Renamed"] } },
+    { "call": { "tool": "propose_changes",
+                "args": { "item_id": "n-002", "changes": [{ "field": "privacy", "new_value": "normal" }] } },
+      "expect": { "ok": false, "proposal_queued": false },
+      "note": "the privacy level is not a field AI may propose" },
+    { "call": { "tool": "propose_changes", "args": { "item_id": "n-002", "changes": [] } },
+      "expect": { "ok": false, "proposal_queued": false } },
+    { "call": { "tool": "delete_item", "args": { "id": "n-002" } },
+      "expect": { "ok": false } }
+  ]
+}

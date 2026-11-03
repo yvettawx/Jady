@@ -1,0 +1,30 @@
+.dem-segmented {
+  display: inline-flex;
+  gap: 2px;
+  padding: 2px;
+  border-radius: var(--dem-radius-sm);
+  background: var(--dem-hover);
+}
+.dem-segment {
+  height: calc(var(--dem-row-h) - 4px);
+  padding: 0 var(--dem-space-3);
+  border: 0;
+  border-radius: var(--dem-radius-xs);
+  color: var(--dem-muted);
+  background: transparent;
+  font: inherit;
+  font-size: var(--dem-text-sm);
+  white-space: nowrap;
+  cursor: default;
+  outline: none;
+  transition: background-color var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-segment[data-selected] {
+  color: var(--dem-text);
+  background: var(--dem-paper);
+  box-shadow: var(--dem-shadow-1);
+}
+.dem-segment[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: 1px;
+}

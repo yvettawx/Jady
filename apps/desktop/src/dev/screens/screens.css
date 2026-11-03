@@ -1,0 +1,103 @@
+.screen-center {
+  position: fixed;
+  inset: 44px 0 56px;
+  z-index: var(--dem-z-panes);
+  display: grid;
+  place-items: center;
+}
+.screen-steps {
+  position: fixed;
+  right: 0;
+  bottom: var(--dem-space-3);
+  left: 0;
+  z-index: var(--dem-z-chrome);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--dem-space-1);
+}
+
+/* A workspace under the title bar, for screens that show panels in cells. */
+.screen-ws {
+  position: fixed;
+  inset: 44px 7px 7px;
+  z-index: var(--dem-z-panes);
+}
+
+/* The launcher review page's examples: above the launcher, so a click reaches them. */
+.screen-launcher-examples {
+  position: fixed;
+  right: 0;
+  bottom: 40px;
+  left: 0;
+  z-index: calc(var(--dem-z-launcher) + 1);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--dem-space-1);
+  pointer-events: none;
+}
+.screen-launcher-examples button {
+  height: 26px;
+  padding: 0 10px;
+  border: 1px solid var(--dem-line);
+  border-radius: var(--dem-radius-pill);
+  font: inherit;
+  font-size: var(--dem-text-xs);
+  color: var(--dem-text);
+  background: var(--dem-paper);
+  pointer-events: auto;
+}
+
+/* The capture window's stand-in desktop: the window sits in the upper third. */
+.screen-capture {
+  position: fixed;
+  top: 22vh;
+  left: 50%;
+  z-index: var(--dem-z-panes);
+  width: min(560px, 90vw);
+  transform: translateX(-50%);
+}
+.screen-capture-reopen {
+  display: block;
+  margin: 0 auto;
+  padding: 6px 14px;
+  border: 1px solid var(--dem-line);
+  border-radius: var(--dem-radius-pill);
+  font: inherit;
+  color: var(--dem-on-glass);
+  background: transparent;
+}
+
+/* 热度图小样 */
+.screen-heat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--dem-space-4);
+  height: 100vh;
+  padding: var(--dem-space-4);
+  box-sizing: border-box;
+}
+.screen-heat-bar {
+  display: flex;
+  gap: var(--dem-space-3);
+}
+.screen-heat-panel {
+  box-sizing: border-box;
+  padding: var(--dem-space-3);
+}
+.screen-heat-panel[data-size="small"] {
+  width: 340px;
+  height: 190px;
+}
+.screen-heat-panel[data-size="medium"] {
+  width: min(960px, 100%);
+  height: 340px;
+}
+.screen-heat-panel[data-size="large"] {
+  width: 100%;
+  flex: 1;
+  min-height: 0;
+}

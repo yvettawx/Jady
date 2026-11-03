@@ -1,0 +1,31 @@
+[package]
+name = "dem-index"
+description = "Rebuildable SQLite index, custom tokenizer and Traditional/Simplified Chinese folding."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[features]
+# Exposes `compare::fixtures` to `dem-dev` tests; shipped code never enables it.
+fixtures = []
+
+[dependencies]
+# SQLCipher with OpenSSL built from source, so no system OpenSSL is needed
+# (docs/spikes/02-search.md). Exact pin: the bundled SQLite/SQLCipher versions are
+# part of the index format.
+rusqlite = { version = "=0.40.2", features = ["bundled-sqlcipher-vendored-openssl"] }
+serde.workspace = true
+thiserror.workspace = true
+serde_json.workspace = true
+unicode-normalization = "=0.1.26"
+caseless = "=0.2.2"
+tracing.workspace = true
+zeroize = "1.9"
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

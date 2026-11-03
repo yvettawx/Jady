@@ -1,0 +1,45 @@
+/* An external plugin's panel: its name above, its own page below. */
+.dem-plugin {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.dem-plugin-name {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-1);
+  padding: var(--dem-space-1) var(--dem-space-2);
+  color: var(--dem-muted);
+  font-size: var(--dem-text-xs);
+}
+.dem-plugin-page {
+  flex: 1;
+  width: 100%;
+  border: 0;
+  background: transparent;
+  color-scheme: normal;
+}
+.dem-plugin-perms {
+  margin: var(--dem-space-2) 0;
+  padding-left: var(--dem-space-4);
+}
+.dem-plugin-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dem-plugin-row {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  padding: var(--dem-space-2) 0;
+}
+.dem-plugin-row-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.dem-plugin-row-text small {
+  color: var(--dem-muted);
+}

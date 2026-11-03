@@ -1,0 +1,68 @@
+.dem-statusbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--dem-space-4);
+  height: 100%;
+  padding: 0 var(--dem-space-4);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-on-glass-muted);
+  white-space: nowrap;
+  overflow: hidden;
+}
+.dem-statusbar-side {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-4);
+  min-width: 0;
+}
+.dem-statusbar-item {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-1);
+}
+.dem-status-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: var(--dem-radius-pill);
+}
+.dem-status-detail {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-1);
+  height: 20px;
+  padding: 0 var(--dem-space-1);
+  margin: 0 calc(-1 * var(--dem-space-1));
+  border: 0;
+  border-radius: var(--dem-radius-sm);
+  font: inherit;
+  color: inherit;
+  background: transparent;
+  cursor: default;
+  outline: none;
+}
+.dem-status-detail[data-hovered],
+.dem-status-detail[data-pressed] {
+  background: var(--dem-hover);
+}
+.dem-status-detail[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+}
+.dem-status-popover {
+  min-width: 220px;
+}
+.dem-status-dialog {
+  outline: none;
+  font-size: var(--dem-text-sm);
+}
+.dem-status-dialog ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dem-status-dialog li {
+  padding: var(--dem-space-2) var(--dem-space-3);
+}
+.dem-status-dialog li + li {
+  border-top: 1px solid var(--dem-line);
+}

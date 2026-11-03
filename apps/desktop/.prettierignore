@@ -1,0 +1,6 @@
+dist
+src-tauri
+src/bindings.ts
+pnpm-lock.yaml
+src/styles/theme.css
+.perf

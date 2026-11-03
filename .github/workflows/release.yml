@@ -1,0 +1,47 @@
+# An unsigned macOS build on a version tag, or on demand, on GitHub's own machines.
+name: release
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  bundle:
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust (version from rust-toolchain.toml)
+        run: rustup show active-toolchain || rustup toolchain install
+
+      - uses: Swatinem/rust-cache@v2
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: apps/desktop/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: Install frontend dependencies
+        working-directory: apps/desktop
+        run: pnpm install --frozen-lockfile
+
+      - name: Build the app
+        working-directory: apps/desktop
+        run: pnpm tauri build --bundles app
+
+      - name: Zip it
+        run: ditto -c -k --keepParent target/release/bundle/macos/Jady.app Jady-macos.zip
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: jady-macos
+          path: Jady-macos.zip
+          if-no-files-found: error

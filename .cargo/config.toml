@@ -1,0 +1,7 @@
+[alias]
+xtask = "run --quiet --package xtask --"
+
+# The vendored OpenSSL (SQLCipher) ships objects without PDBs; MSVC's link.exe then
+# prints thousands of harmless LNK4099 warnings that bury real errors.
+[target.'cfg(all(windows, target_env = "msvc"))']
+rustflags = ["-C", "link-arg=/ignore:4099"]

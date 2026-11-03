@@ -1,0 +1,86 @@
+/* The note sheet: solid paper inside a workspace cell (P0.5 visual final). */
+.dem-sheet {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--dem-paper);
+  color: var(--dem-text);
+}
+.dem-edbar {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 2px;
+  height: 44px;
+  padding: 0 var(--dem-space-2);
+  border-bottom: 1px solid var(--dem-paper-line);
+  overflow: hidden;
+}
+.dem-edbar-item {
+  display: inline-flex;
+  align-items: center;
+}
+.dem-edbar-sep {
+  width: 1px;
+  height: 16px;
+  margin: 0 var(--dem-space-2);
+  background: var(--dem-paper-line);
+}
+.dem-edbar-gap {
+  flex: 1;
+  min-width: var(--dem-space-2);
+}
+.dem-edbar-ai {
+  margin-left: var(--dem-space-1);
+}
+.dem-edbar-ai .dem-button {
+  color: var(--dem-ai-text);
+  border-color: color-mix(in srgb, var(--dem-ai) 30%, transparent);
+  background: transparent;
+}
+.dem-sheet-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+}
+.dem-sheet-page {
+  max-width: var(--dem-measure-long);
+  margin: 0 auto;
+  padding: var(--dem-space-7) var(--dem-space-6) var(--dem-space-10);
+  font-size: var(--dem-text-long);
+}
+.dem-sheet-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-3);
+  margin: 0 0 var(--dem-space-2);
+  font-family: var(--dem-font-ui);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+}
+.dem-sheet-no {
+  font-family: var(--dem-font-display);
+  font-weight: 600;
+  letter-spacing: 0.08em;
+}
+.dem-sheet-no span {
+  margin-left: 2px;
+  font-variant-numeric: tabular-nums;
+  color: var(--dem-text);
+}
+.dem-sheet-kind {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 1px 8px;
+  border-radius: var(--dem-radius-pill);
+  background: var(--dem-hover);
+}
+.dem-sheet-title {
+  margin: 0 0 var(--dem-space-5);
+  font-family: var(--dem-font-long);
+  font-size: 1.75em;
+  font-weight: 700;
+  line-height: 1.3;
+  text-wrap: balance;
+}

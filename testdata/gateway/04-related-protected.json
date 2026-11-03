@@ -1,0 +1,16 @@
+{
+  "name": "links to hidden items show only a placeholder",
+  "description": "related lists outgoing and incoming links; hidden ends appear only as protected content, without id or title.",
+  "authorized": false,
+  "steps": [
+    { "call": { "tool": "related", "args": { "id": "n-001" } },
+      "expect": { "ok": true, "ids": ["n-001", "n-002"], "protected_links": 3, "contains": ["protected content"] },
+      "note": "n-001 links to one item of every level" },
+    { "call": { "tool": "related", "args": { "id": "n-002" } },
+      "expect": { "ok": true, "ids": ["n-001", "n-002"], "protected_links": 1 },
+      "note": "incoming links from n-001 (visible) and p-001 (private)" },
+    { "call": { "tool": "related", "args": { "id": "n-003" } },
+      "expect": { "ok": true, "ids": ["n-003"], "protected_links": 2 },
+      "note": "incoming links from s-001 and c-002, both hidden here" }
+  ]
+}

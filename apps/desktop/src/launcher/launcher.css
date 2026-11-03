@@ -1,0 +1,169 @@
+/* The launcher floats in the upper third of the window, over everything (B.4 z-launcher). It
+ * sits over text, so it is nearly opaque paper with CSS blur, like other overlays. */
+.dem-launcher-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--dem-z-launcher);
+  background: color-mix(in srgb, var(--dem-canvas) 18%, transparent);
+}
+.dem-launcher-overlay[data-entering] {
+  animation: dem-fade var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-launcher-overlay[data-exiting] {
+  animation: dem-fade var(--dem-dur-fast) var(--dem-ease-exit) reverse;
+}
+.dem-launcher {
+  position: absolute;
+  top: 16vh;
+  left: 50%;
+  width: min(640px, 92vw);
+  transform: translateX(-50%);
+  outline: none;
+}
+.dem-launcher[data-entering] {
+  animation: dem-launcher-in var(--dem-dur-base) var(--dem-ease-spring);
+}
+@keyframes dem-launcher-in {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px) scale(0.97);
+  }
+}
+.dem-launcher-dialog {
+  outline: none;
+}
+.dem-launcher-box {
+  border-radius: var(--dem-radius-xl);
+  background: color-mix(in srgb, var(--dem-paper) 88%, transparent);
+  -webkit-backdrop-filter: blur(var(--dem-glass-blur)) saturate(1.8);
+  backdrop-filter: blur(var(--dem-glass-blur)) saturate(1.8);
+  box-shadow:
+    inset 0 1px 0 var(--dem-glass-rim-1),
+    inset 0 0 0 1px var(--dem-glass-rim-2),
+    var(--dem-shadow-3);
+  color: var(--dem-text);
+  overflow: hidden;
+}
+.dem-launcher-field {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  height: 52px;
+  padding: 0 var(--dem-space-4);
+  border-bottom: 1px solid var(--dem-line);
+}
+.dem-launcher-search {
+  flex: none;
+  color: var(--dem-muted);
+}
+.dem-launcher-mode,
+.dem-launcher-scope {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 4px;
+  height: 22px;
+  padding: 0 8px;
+  border-radius: var(--dem-radius-pill);
+  font-size: var(--dem-text-xs);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.dem-launcher-mode {
+  color: var(--dem-accent-text);
+  background: color-mix(in srgb, var(--dem-accent) 14%, transparent);
+}
+.dem-launcher-scope {
+  color: var(--dem-text);
+  background: var(--dem-hover);
+}
+.dem-launcher-input {
+  flex: 1;
+  min-width: 0;
+  height: 100%;
+  border: 0;
+  outline: none;
+  font: inherit;
+  font-size: var(--dem-text-lg);
+  color: inherit;
+  background: transparent;
+}
+.dem-launcher-input::placeholder {
+  color: var(--dem-faint);
+}
+.dem-launcher-results {
+  max-height: min(52vh, 440px);
+  padding: var(--dem-space-1) var(--dem-space-2) var(--dem-space-2);
+  overflow-y: auto;
+}
+.dem-launcher-group {
+  margin: var(--dem-space-2) var(--dem-space-2) var(--dem-space-1);
+  font-size: var(--dem-text-xs);
+  font-weight: 600;
+  color: var(--dem-muted);
+}
+.dem-launcher-item {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-3);
+  min-height: 36px;
+  padding: 0 var(--dem-space-3);
+  border-radius: var(--dem-radius-md);
+  font-size: var(--dem-text-md);
+  cursor: default;
+}
+.dem-launcher-item[data-active] {
+  background: color-mix(in srgb, var(--dem-accent) 13%, transparent);
+}
+.dem-launcher-item[aria-disabled] {
+  color: var(--dem-muted);
+}
+.dem-launcher-icon {
+  flex: none;
+  color: var(--dem-muted);
+}
+.dem-launcher-item[data-active] .dem-launcher-icon {
+  color: var(--dem-accent-text);
+}
+.dem-launcher-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+  padding: 6px 0;
+}
+.dem-launcher-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dem-launcher-title mark {
+  font-weight: 700;
+  color: var(--dem-accent-text);
+  background: transparent;
+}
+.dem-launcher-note {
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+}
+.dem-launcher-meta {
+  flex: none;
+  max-width: 40%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-launcher-kbd {
+  flex: none;
+  font-family: var(--dem-font-ui);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+}
+.dem-launcher-empty {
+  margin: 0;
+  padding: var(--dem-space-4) var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}

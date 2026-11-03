@@ -1,0 +1,70 @@
+.dem-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--dem-space-2);
+  padding: var(--dem-space-7) var(--dem-space-5);
+  text-align: center;
+}
+.dem-empty-icon {
+  color: var(--dem-faint);
+}
+.dem-empty-title {
+  margin: 0;
+  font-size: var(--dem-text-md);
+  color: var(--dem-text);
+}
+.dem-empty-desc {
+  max-width: 320px;
+  margin: 0;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+
+.dem-spinner {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-spinner-ring {
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--dem-line);
+  border-top-color: var(--dem-accent-text);
+  border-radius: var(--dem-radius-pill);
+  /* Tied to a motion token, so it stops when the system asks for reduced motion. */
+  animation: dem-spin calc(var(--dem-dur-slow) * 2.5) linear infinite;
+}
+@keyframes dem-spin {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
+.dem-skeleton {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dem-space-2);
+}
+.dem-skeleton-line {
+  height: 10px;
+  border-radius: var(--dem-radius-xs);
+  background: linear-gradient(
+    90deg,
+    var(--dem-hover) 0%,
+    color-mix(in srgb, var(--dem-text) 12%, transparent) 50%,
+    var(--dem-hover) 100%
+  );
+  background-size: 200% 100%;
+  animation: dem-shimmer calc(var(--dem-dur-scene) * 2.5) ease-in-out infinite;
+}
+@keyframes dem-shimmer {
+  from {
+    background-position: 100% 0;
+  }
+  to {
+    background-position: -100% 0;
+  }
+}

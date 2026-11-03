@@ -1,0 +1,52 @@
+.dem-open-list {
+  font-size: var(--dem-text-sm);
+}
+.dem-open-row {
+  gap: var(--dem-space-1);
+  min-height: calc(var(--dem-row-h) - 2px);
+  color: var(--dem-on-glass-muted);
+}
+.dem-open-row[data-active] {
+  color: var(--dem-on-glass);
+  background: color-mix(in srgb, var(--dem-paper) 55%, transparent);
+}
+.dem-open-row[data-kind="preview"] .dem-open-title {
+  font-style: italic;
+}
+.dem-open-row[data-dragging] {
+  opacity: 0.5;
+}
+.dem-open-pin {
+  flex: none;
+  width: 10px;
+  font-size: 9px;
+  color: var(--dem-accent-text);
+}
+.dem-open-title {
+  flex: 1;
+}
+.dem-open-drag,
+.dem-open-close {
+  display: inline-flex;
+  flex: none;
+  padding: 2px;
+  border: 0;
+  border-radius: var(--dem-radius-xs);
+  color: inherit;
+  background: transparent;
+  opacity: 0;
+  cursor: default;
+}
+.dem-open-row:hover .dem-open-drag,
+.dem-open-row:hover .dem-open-close,
+.dem-open-row[data-focus-visible-within] .dem-open-close,
+.dem-open-drag[data-focus-visible],
+.dem-open-close[data-focus-visible] {
+  opacity: 1;
+}
+.dem-open-close[data-hovered] {
+  background: var(--dem-hover);
+}
+.dem-open-list .react-aria-DropIndicator[data-drop-target] {
+  outline: 1px solid var(--dem-accent-text);
+}

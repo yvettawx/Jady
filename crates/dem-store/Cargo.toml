@@ -1,0 +1,31 @@
+[package]
+name = "dem-store"
+description = "Library directory layout, CRDT item documents, attachments, logs and version history."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+dem-model.workspace = true
+dem-crypto.workspace = true
+# Exact pin: Rust core and the editor's loro-crdt must be the same version, and an
+# upgrade is a format change (format spec §6.1).
+loro = "=1.16.2"
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+uuid.workspace = true
+jiff.workspace = true
+data-encoding = "2.11"
+zeroize = { version = "1.9", features = ["derive"] }
+pulldown-cmark = { version = "0.13", default-features = false }
+
+[dev-dependencies]
+tempfile.workspace = true
+proptest.workspace = true
+
+[lints]
+workspace = true

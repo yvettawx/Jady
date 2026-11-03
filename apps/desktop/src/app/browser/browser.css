@@ -1,0 +1,24 @@
+.dem-browser-sites {
+  width: 100%;
+  min-height: 5.5em;
+  padding: var(--dem-space-2);
+  border: 1px solid var(--dem-line);
+  border-radius: var(--dem-radius-sm);
+  background: var(--dem-paper);
+  color: var(--dem-text);
+  font: inherit;
+  font-family: var(--dem-font-mono);
+  resize: vertical;
+}
+.dem-browser-sites:focus {
+  outline: none;
+  border-color: var(--dem-accent-text);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dem-accent) 22%, transparent);
+}
+.dem-browser-request {
+  display: block;
+  margin-top: var(--dem-space-2);
+  font-family: var(--dem-font-mono);
+  font-size: var(--dem-text-sm);
+  overflow-wrap: anywhere;
+}

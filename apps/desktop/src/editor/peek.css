@@ -1,0 +1,48 @@
+/* The peek window for a link (§3.3): a small sheet of paper over the text. */
+/* It sits over text, so it is paper, not glass (B.2). */
+.dem-popover.dem-peek {
+  width: min(420px, 90vw);
+  max-height: min(360px, 60vh);
+  padding: var(--dem-space-4);
+  color: var(--dem-text);
+  background: var(--dem-paper);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow: var(--dem-shadow-2);
+}
+.dem-peek-dialog {
+  display: flex;
+  flex-direction: column;
+  max-height: inherit;
+  outline: none;
+}
+.dem-peek-title {
+  margin: 0 0 var(--dem-space-2);
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-lg);
+  font-weight: 700;
+}
+.dem-peek-body {
+  flex: 1;
+  min-height: 0;
+  max-width: none;
+  overflow: auto;
+  font-size: var(--dem-text-md);
+}
+.dem-peek-missing {
+  margin: 0 0 var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-peek-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--dem-space-2);
+  padding-top: var(--dem-space-3);
+}
+.dem-peek-inner {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  max-height: inherit;
+}

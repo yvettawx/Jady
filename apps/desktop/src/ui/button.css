@@ -1,0 +1,71 @@
+.dem-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dem-space-1);
+  height: var(--dem-row-h);
+  padding: 0 var(--dem-space-3);
+  border: 1px solid transparent;
+  border-radius: var(--dem-radius-sm);
+  font: inherit;
+  font-size: var(--dem-text-base);
+  line-height: 1;
+  white-space: nowrap;
+  color: var(--dem-text);
+  background: transparent;
+  cursor: default;
+  user-select: none;
+  outline: none;
+  transition:
+    transform var(--dem-dur-fast) var(--dem-ease-spring),
+    background-color var(--dem-dur-fast) var(--dem-ease-standard),
+    border-color var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-button[data-size="sm"] {
+  height: calc(var(--dem-row-h) - var(--dem-space-1));
+  padding: 0 var(--dem-space-2);
+  font-size: var(--dem-text-sm);
+}
+.dem-button[data-icon-only] {
+  width: var(--dem-row-h);
+  padding: 0;
+}
+.dem-button[data-size="sm"][data-icon-only] {
+  width: calc(var(--dem-row-h) - var(--dem-space-1));
+}
+
+.dem-button[data-variant="primary"] {
+  color: var(--dem-on-accent);
+  background: var(--dem-accent-fill);
+}
+.dem-button[data-variant="secondary"] {
+  background: var(--dem-paper);
+  border-color: var(--dem-line);
+  box-shadow: var(--dem-shadow-1);
+}
+.dem-button[data-variant="danger"] {
+  color: var(--dem-on-danger);
+  background: var(--dem-danger-fill);
+}
+.dem-button[data-variant="secondary"][data-hovered] {
+  background: color-mix(in srgb, var(--dem-text) 6%, var(--dem-paper));
+}
+.dem-button[data-variant="quiet"][data-hovered] {
+  background: var(--dem-hover);
+}
+.dem-button[data-variant="primary"][data-hovered],
+.dem-button[data-variant="danger"][data-hovered] {
+  filter: brightness(1.08);
+}
+
+/* Glass rule: a pressed control shrinks a little. */
+.dem-button[data-pressed] {
+  transform: scale(0.96);
+}
+.dem-button[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: 2px;
+}
+.dem-button[data-disabled] {
+  opacity: 0.45;
+}

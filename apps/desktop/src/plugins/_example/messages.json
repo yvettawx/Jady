@@ -1,0 +1,34 @@
+{
+  "zh-CN": {
+    "example.panel": "翻一翻",
+    "example.pick": "随便翻一条",
+    "example.pick.none": "还没有可以翻的内容",
+    "example.widget": "翻一翻",
+    "example.count": "一共 {n} 条",
+    "example.again": "再翻一条",
+    "example.launcher.group": "翻一翻",
+    "example.settings.title": "每次打开先翻一条",
+    "settings.section.example": "翻一翻",
+    "scheme.example-forest": "林间",
+    "example.template": "植物",
+    "example.template.about": "记下每盆植物什么时候浇的水。",
+    "example.template.type": "植物",
+    "example.template.watered": "浇水日期"
+  },
+  "en": {
+    "example.panel": "Browse",
+    "example.pick": "Open a random item",
+    "example.pick.none": "Nothing to browse yet",
+    "example.widget": "Browse",
+    "example.count": "{n} items in all",
+    "example.again": "Another one",
+    "example.launcher.group": "Browse",
+    "example.settings.title": "Open one on every start",
+    "settings.section.example": "Browse",
+    "scheme.example-forest": "Woodland",
+    "example.template": "Plants",
+    "example.template.about": "Note when each plant was watered.",
+    "example.template.type": "Plant",
+    "example.template.watered": "Watered on"
+  }
+}

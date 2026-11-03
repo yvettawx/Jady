@@ -1,0 +1,55 @@
+/* Fixed to the window, centred above the selection. (.dem-glass sets position: relative.) */
+.dem-glass.dem-selbar {
+  position: fixed;
+  z-index: var(--dem-z-peek);
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--dem-radius-md);
+  box-shadow: var(--dem-shadow-2);
+  transform: translate(-50%, calc(-100% - 8px));
+  animation: dem-selbar-in var(--dem-dur-fast) var(--dem-ease-spring);
+}
+@keyframes dem-selbar-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, calc(-100% - 2px)) scale(0.96);
+  }
+}
+.dem-selbar-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  min-width: 28px;
+  height: 26px;
+  padding: 0 6px;
+  border: 0;
+  border-radius: var(--dem-radius-sm);
+  font: inherit;
+  font-size: var(--dem-text-sm);
+  justify-content: center;
+  color: var(--dem-on-glass);
+  background: transparent;
+  cursor: default;
+  outline: none;
+}
+.dem-selbar-btn[data-hovered] {
+  background: var(--dem-hover);
+}
+.dem-selbar-btn[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+}
+.dem-selbar-btn[data-ai] {
+  color: var(--dem-ai-text);
+  font-weight: 600;
+}
+.dem-selbar-btn[data-disabled] {
+  opacity: 0.4;
+}
+.dem-selbar-sep {
+  width: 1px;
+  height: 16px;
+  margin: 0 3px;
+  background: var(--dem-line);
+}

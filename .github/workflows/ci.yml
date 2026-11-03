@@ -1,0 +1,58 @@
+# Every push and pull request: checks and tests on macOS, on GitHub's own machines. Never use
+# self-hosted runners here: on a public repository they would run code from anyone's pull request.
+name: ci
+
+on:
+  push:
+    branches: ["**"]
+  pull_request:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    name: checks (macos)
+    runs-on: macos-latest
+    timeout-minutes: 90
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Install Rust (version from rust-toolchain.toml)
+        run: rustup show active-toolchain || rustup toolchain install
+
+      - uses: Swatinem/rust-cache@v2
+
+      - uses: taiki-e/install-action@v2
+        with:
+          tool: cargo-deny
+
+      - uses: pnpm/action-setup@v4
+        with:
+          package_json_file: apps/desktop/package.json
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+
+      - name: All checks
+        shell: bash
+        run: |
+          set -o pipefail
+          cargo xtask ci --require-deny 2>&1 | tee ci.log
+
+      # Put the tail of the failing output in annotations, readable without downloading logs.
+      - name: Report failure
+        if: failure()
+        shell: bash
+        run: |
+          enc() { sed -e 's/%/%25/g' | awk '{printf "%s%%0A", $0}'; }
+          tr -d '\r' < ci.log > clean.log
+          grep -E -n '^==> |^Error|^error(\[|:)|FAILED|panicked|^---- |assertion' clean.log | grep -v 'test result: ok' | tail -n 60 | enc > errors.txt
+          grep -v -E '^test .* \.\.\. ok$|test result: ok|^running [0-9]+ tests?$|^$' clean.log | tail -n 80 | enc > tail.txt
+          echo "::error title=cargo xtask ci failed (error lines)::$(cat errors.txt)"
+          echo "::error title=cargo xtask ci failed (tail)::$(cat tail.txt)"

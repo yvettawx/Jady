@@ -1,0 +1,27 @@
+.dem-select-button {
+  font: inherit;
+  font-size: var(--dem-text-base);
+  text-align: start;
+  cursor: default;
+  outline: none;
+}
+.dem-select-button[data-focus-visible] {
+  border-color: var(--dem-accent-text);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--dem-accent) 22%, transparent);
+}
+.dem-select-button[data-pressed] {
+  transform: scale(0.98);
+}
+.dem-select-value {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dem-select-value[data-placeholder] {
+  color: var(--dem-faint);
+}
+.dem-select .dem-popover {
+  min-width: var(--trigger-width);
+}

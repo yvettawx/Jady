@@ -1,0 +1,62 @@
+[package]
+name = "dem-desktop"
+description = "Tauri shell: exposes dem-core to the React UI as commands and events."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[[bin]]
+name = "dem-desktop"
+path = "src/main.rs"
+
+[build-dependencies]
+tauri-build = { workspace = true }
+
+[dependencies]
+dem-core = { workspace = true, features = ["specta"] }
+dem-ai-gateway.workspace = true
+dem-ai-provider.workspace = true
+dem-sandbox.workspace = true
+dem-browser.workspace = true
+dem-sync.workspace = true
+uuid.workspace = true
+tauri = { workspace = true }
+specta = { workspace = true }
+tauri-specta = { workspace = true }
+specta-typescript = { workspace = true }
+serde.workspace = true
+dem-diag.workspace = true
+tauri-plugin-dialog = "2"
+tauri-plugin-notification = "2"
+tauri-plugin-global-shortcut = "2"
+tauri-plugin-deep-link = "2"
+serde_json.workspace = true
+keyring = { version = "3", default-features = false, features = ["apple-native"] }
+tracing.workspace = true
+arboard = { version = "3", default-features = false }
+zeroize = "1.9"
+
+[features]
+# The end-to-end bridge (src/e2e.rs): never in a release.
+e2e = ["tauri/test"]
+
+[[example]]
+name = "e2e_bridge"
+required-features = ["e2e"]
+
+[target.'cfg(windows)'.dependencies]
+# Reads the 透明效果 setting; already in the tree through tauri-build.
+winreg = "0.56"
+# Caption buttons for the self-drawn title bar that keep the Windows 11 snap layout flyout
+# (a native child window answers HTMAXBUTTON over our maximize button). P0.5-07-1.
+tauri-plugin-frame = "1.1"
+
+[lints]
+workspace = true
+
+[dev-dependencies]
+tempfile.workspace = true
+tauri = { workspace = true, features = ["test"] }
+serde_json.workspace = true

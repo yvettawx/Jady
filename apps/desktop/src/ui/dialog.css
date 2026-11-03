@@ -1,0 +1,53 @@
+.dem-modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: var(--dem-z-overlay);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: color-mix(in srgb, var(--dem-canvas) 45%, transparent);
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+}
+.dem-modal-overlay[data-entering] {
+  animation: dem-fade var(--dem-dur-base) var(--dem-ease-standard);
+}
+.dem-modal-overlay[data-exiting] {
+  animation: dem-fade var(--dem-dur-fast) var(--dem-ease-exit) reverse;
+}
+.dem-modal {
+  width: min(440px, calc(100vw - 2 * var(--dem-space-6)));
+  max-height: calc(100vh - 2 * var(--dem-space-6));
+  overflow: auto;
+  border-radius: var(--dem-radius-2xl);
+  background: var(--dem-paper);
+  color: var(--dem-text);
+  box-shadow:
+    inset 0 1px 0 var(--dem-glass-rim-1),
+    var(--dem-shadow-4);
+}
+.dem-modal[data-entering] {
+  animation: dem-pop-in var(--dem-dur-base) var(--dem-ease-spring);
+}
+.dem-dialog {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dem-space-3);
+  padding: var(--dem-space-5);
+  outline: none;
+}
+.dem-dialog-title {
+  margin: 0;
+  font-size: var(--dem-text-md);
+  font-weight: 600;
+}
+.dem-dialog-body {
+  color: var(--dem-muted);
+  line-height: var(--dem-leading-ui);
+}
+.dem-dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--dem-space-2);
+  margin-top: var(--dem-space-2);
+}

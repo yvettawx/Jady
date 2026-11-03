@@ -1,0 +1,16 @@
+[package]
+name = "dem-sandbox"
+description = "Runs code-exercise answers with no files or network: WebAssembly everywhere, the system sandbox on macOS (P4)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+wasmtime = { version = "=49.0.5", default-features = false, features = ["cranelift", "runtime", "std", "wat", "gc-drc", "threads"] }
+wasmtime-wasi = { version = "=49.0.5", default-features = false, features = ["p1"] }
+thiserror.workspace = true

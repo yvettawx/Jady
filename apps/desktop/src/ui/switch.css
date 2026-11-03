@@ -1,0 +1,48 @@
+.dem-switch {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  font-size: var(--dem-text-base);
+  color: inherit;
+  cursor: default;
+  outline: none;
+}
+.dem-switch-track {
+  position: relative;
+  flex: none;
+  width: 32px;
+  height: 18px;
+  border-radius: var(--dem-radius-pill);
+  background: var(--dem-faint);
+  transition: background-color var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-switch-thumb {
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 14px;
+  height: 14px;
+  border-radius: var(--dem-radius-pill);
+  background: var(--dem-paper);
+  box-shadow: var(--dem-shadow-1);
+  transition: transform var(--dem-dur-base) var(--dem-ease-spring);
+}
+.dem-switch[data-selected] .dem-switch-track {
+  background: var(--dem-accent-fill);
+}
+.dem-switch[data-selected] .dem-switch-thumb {
+  transform: translateX(14px);
+}
+.dem-switch[data-pressed] .dem-switch-thumb {
+  transform: scale(0.9);
+}
+.dem-switch[data-selected][data-pressed] .dem-switch-thumb {
+  transform: translateX(14px) scale(0.9);
+}
+.dem-switch[data-focus-visible] .dem-switch-track {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: 2px;
+}
+.dem-switch[data-disabled] {
+  opacity: 0.45;
+}

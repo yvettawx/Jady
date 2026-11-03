@@ -1,0 +1,37 @@
+[package]
+name = "dem-core"
+description = "Service facade: the only entry point for the UI and the AI gateway to reach data."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[features]
+# Derive specta::Type on facade DTOs so the desktop app can generate TypeScript types.
+specta = ["dep:specta", "dem-model/specta"]
+
+[dependencies]
+zeroize = "1.9"
+csv = "1"
+dem-learn.workspace = true
+dem-store.workspace = true
+dem-sync.workspace = true
+dem-model.workspace = true
+dem-crypto.workspace = true
+dem-index.workspace = true
+dem-io.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+tracing.workspace = true
+jiff.workspace = true
+uuid.workspace = true
+data-encoding = "2.11"
+serde.workspace = true
+specta = { workspace = true, optional = true }
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

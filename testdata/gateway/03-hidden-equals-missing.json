@@ -1,0 +1,23 @@
+{
+  "name": "hidden items are indistinguishable from missing ones",
+  "description": "Every tool answers a hidden item exactly like an id that does not exist.",
+  "authorized": false,
+  "steps": [
+    { "call": { "tool": "read_item", "args": { "id": "p-001" } },
+      "expect": { "ok": false, "same_as": { "tool": "read_item", "args": { "id": "x-404" } } } },
+    { "call": { "tool": "read_item", "args": { "id": "c-002" } },
+      "expect": { "ok": false, "same_as": { "tool": "read_item", "args": { "id": "x-404" } } } },
+    { "call": { "tool": "read_item", "args": { "id": "s-002" } },
+      "expect": { "ok": false, "same_as": { "tool": "read_item", "args": { "id": "x-404" } } },
+      "note": "sensitive, unauthorized session" },
+    { "call": { "tool": "related", "args": { "id": "p-002" } },
+      "expect": { "ok": false, "same_as": { "tool": "related", "args": { "id": "x-404" } } } },
+    { "call": { "tool": "propose_changes",
+                "args": { "item_id": "c-001", "changes": [{ "field": "title", "new_value": "x" }] } },
+      "expect": { "ok": false, "proposal_queued": false,
+                  "same_as": { "tool": "propose_changes",
+                               "args": { "item_id": "x-404", "changes": [{ "field": "title", "new_value": "x" }] } } } },
+    { "call": { "tool": "search", "args": { "query": "kwprivate" } },
+      "expect": { "ok": true, "same_as": { "tool": "search", "args": { "query": "nothing-matches-this" } } } }
+  ]
+}

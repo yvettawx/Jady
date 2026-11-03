@@ -1,0 +1,3 @@
+# Sample libraries are encrypted binary files and must stay byte-identical
+# (`local/device.json` is an encrypted envelope despite its name).
+v*/library/** binary

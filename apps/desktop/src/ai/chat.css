@@ -1,0 +1,451 @@
+/* A small window over content: CSS-blurred glass (B.2), bottom right above the AI button. */
+.dem-glass.dem-chat-window {
+  position: fixed;
+  right: 20px;
+  bottom: 84px;
+  z-index: var(--dem-z-float);
+  display: flex;
+  flex-direction: column;
+  width: min(420px, calc(100vw - 40px));
+  height: min(560px, calc(100vh - 140px));
+  border-radius: var(--dem-radius-xl);
+  box-shadow: var(--dem-shadow-3);
+  overflow: hidden;
+}
+.dem-chat-head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--dem-space-2);
+  height: 40px;
+  padding: 0 var(--dem-space-1) 0 var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-ai-text);
+  cursor: grab;
+  touch-action: none;
+}
+.dem-chat-head:active {
+  cursor: grabbing;
+}
+.dem-chat-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-weight: 600;
+  color: var(--dem-on-glass);
+}
+.dem-chat-gap {
+  flex: 1;
+}
+.dem-chat-session {
+  display: inline-flex;
+  flex: none;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--dem-text-xs);
+  color: var(--dem-privacy-sensitive);
+}
+
+.dem-chat {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-height: 0;
+  color: var(--dem-text);
+  background: color-mix(in srgb, var(--dem-paper) 88%, transparent);
+}
+.dem-chat-list {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--dem-space-3);
+  min-height: 0;
+  padding: var(--dem-space-3) var(--dem-space-4);
+  overflow: auto;
+  font-size: var(--dem-text-md);
+  line-height: var(--dem-leading-ui);
+}
+.dem-chat-list > * {
+  flex: none;
+}
+.dem-chat-quote {
+  margin: 0;
+  padding-left: var(--dem-space-2);
+  border-left: 2px solid var(--dem-line);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+/* 说话: no frame, it is only talk. */
+.dem-chat-me {
+  align-self: flex-end;
+  max-width: 85%;
+  margin: 0;
+  padding: var(--dem-space-1) var(--dem-space-3);
+  border-radius: var(--dem-radius-lg);
+  background: var(--dem-hover);
+}
+.dem-chat-say {
+  margin: 0;
+  white-space: pre-wrap;
+}
+.dem-chat-thinking {
+  margin: 0;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-ai-text);
+}
+.dem-chat-gen h4,
+.dem-chat-prop h4 {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  margin: 0;
+  font-size: var(--dem-text-sm);
+  font-weight: 600;
+}
+/* 生成: a sheet of its own, waiting to be placed. */
+.dem-chat-gen {
+  padding: var(--dem-space-3);
+  border: 1px solid var(--dem-paper-line);
+  border-radius: var(--dem-radius-md);
+  background: var(--dem-paper);
+  box-shadow: var(--dem-shadow-1);
+}
+.dem-chat-gen p {
+  margin: var(--dem-space-1) 0 0;
+  font-family: var(--dem-font-long);
+}
+.dem-chat-gen footer,
+.dem-chat-prop footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--dem-space-2);
+  margin-top: var(--dem-space-2);
+}
+/* 提议: AI's colour, the change itself, and nothing has happened yet. */
+.dem-chat-prop {
+  padding: var(--dem-space-3);
+  border-radius: var(--dem-radius-md);
+  background: color-mix(in srgb, var(--dem-ai) 9%, var(--dem-paper));
+  box-shadow: inset 0 0 0 1px color-mix(in srgb, var(--dem-ai) 30%, transparent);
+}
+.dem-chat-prop footer {
+  justify-content: flex-end;
+}
+.dem-chat-prop[data-state="ignored"] .dem-diff-inline {
+  opacity: 0.5;
+}
+.dem-chat-prop .dem-diff-inline {
+  margin-top: var(--dem-space-2);
+  font-size: var(--dem-text-sm);
+}
+.dem-chat-prop .dem-diff-inline p {
+  margin: var(--dem-space-1) 0;
+}
+.dem-chat-target {
+  font-size: var(--dem-text-sm);
+  color: var(--dem-accent-text);
+  text-decoration-color: color-mix(in srgb, var(--dem-accent-text) 40%, transparent);
+  text-underline-offset: 2px;
+}
+.dem-chat-dot {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--dem-ai);
+}
+.dem-chat-done {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  margin-right: auto;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+
+.dem-chat-compose {
+  display: flex;
+  flex: none;
+  align-items: flex-end;
+  gap: var(--dem-space-2);
+  padding: var(--dem-space-2) var(--dem-space-3);
+  border-top: 1px solid var(--dem-paper-line);
+}
+.dem-chat-compose textarea {
+  flex: 1;
+  min-width: 0;
+  max-height: 120px;
+  padding: var(--dem-space-1) 0;
+  border: 0;
+  outline: 0;
+  resize: none;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: var(--dem-text-md);
+  field-sizing: content;
+}
+/* In a workspace cell, where the AI button can sit in the corner. */
+.dem-chat-pane .dem-chat-compose {
+  padding-right: 76px;
+}
+.dem-chat-pane {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+}
+.dem-chat-pane-head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--dem-space-2);
+  padding: var(--dem-space-1) var(--dem-space-2) var(--dem-space-1) var(--dem-space-4);
+}
+.dem-chat-list a {
+  color: var(--dem-accent-text);
+  text-decoration-color: color-mix(in srgb, var(--dem-accent-text) 40%, transparent);
+  text-underline-offset: 2px;
+}
+/* 段落旁的小点 */
+.dem-prop-mark {
+  position: absolute;
+  top: 0.35em;
+  right: calc(-1 * var(--dem-space-6));
+  user-select: none;
+}
+.dem-prop-dot {
+  display: grid;
+  place-items: center;
+  width: 20px;
+  height: 20px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: none;
+  cursor: pointer;
+}
+.dem-prop-dot:hover {
+  background: var(--dem-hover);
+}
+.dem-prop-popover {
+  width: 360px;
+  padding: 0;
+}
+.dem-prop-popover [role="dialog"] {
+  outline: none;
+}
+.dem-chat-prop[data-stale] .dem-diff-inline {
+  opacity: 0.5;
+}
+.dem-chat-prop[data-state="confirmed"] .dem-chat-dot,
+.dem-chat-prop[data-state="ignored"] .dem-chat-dot {
+  opacity: 0.35;
+}
+/* 左栏 */
+.dem-prop-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dem-space-2);
+  height: 100%;
+  padding: 0 var(--dem-space-2) var(--dem-space-2);
+  overflow: auto;
+  color: var(--dem-text);
+}
+.dem-prop-list > * {
+  flex: none;
+}
+.dem-prop-batch {
+  display: flex;
+  justify-content: flex-end;
+}
+.dem-prop-none {
+  margin: 0;
+  padding: var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-on-glass-muted);
+}
+
+/* 本次收获 */
+.dem-harvest {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--dem-paper);
+  color: var(--dem-text);
+}
+.dem-harvest-page {
+  flex: 1;
+  width: 100%;
+  max-width: 660px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: var(--dem-space-6) var(--dem-space-5);
+  overflow: auto;
+  box-sizing: border-box;
+}
+.dem-harvest h2 {
+  margin: 0 0 var(--dem-space-2);
+  font-size: var(--dem-text-xl);
+}
+.dem-harvest-summary {
+  margin: 0 0 var(--dem-space-5);
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-md);
+  line-height: var(--dem-leading-long);
+}
+.dem-harvest section {
+  margin-top: var(--dem-space-5);
+}
+.dem-harvest h3 {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-1);
+  margin: 0 0 var(--dem-space-1);
+  font-size: var(--dem-text-sm);
+  font-weight: 500;
+  color: var(--dem-muted);
+}
+.dem-harvest ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dem-harvest-row {
+  display: flex;
+  gap: var(--dem-space-3);
+  padding: var(--dem-space-2) 0;
+  border-top: 1px solid var(--dem-paper-line);
+}
+.dem-harvest-row .dem-check {
+  flex: none;
+  padding-top: 2px;
+}
+.dem-harvest-row[data-off] .dem-harvest-body {
+  opacity: 0.45;
+}
+.dem-harvest-body {
+  flex: 1;
+  min-width: 0;
+  transition: opacity var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-harvest-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: var(--dem-space-2);
+  margin: 0;
+  font-size: var(--dem-text-md);
+}
+.dem-harvest-head.dem-diff-inline {
+  font-family: var(--dem-font-long);
+}
+.dem-harvest-quote {
+  margin: 2px 0 0;
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-harvest-quote b {
+  font-weight: 600;
+  color: var(--dem-text);
+}
+.dem-harvest-note {
+  margin: 2px 0 0;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+/* Lines up with the page, which keeps its buttons clear of the AI button in the corner. */
+.dem-harvest-foot {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--dem-space-2);
+  padding: var(--dem-space-2) max(var(--dem-space-5), calc((100% - 660px) / 2 + var(--dem-space-5)));
+  border-top: 1px solid var(--dem-paper-line);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-harvest-saved li {
+  padding: 2px 0;
+  font-size: var(--dem-text-md);
+}
+.dem-harvest-saved .dem-button {
+  margin-top: var(--dem-space-3);
+}
+
+/* 来源和把握 */
+.dem-source-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--dem-space-1) var(--dem-space-2);
+  margin-top: var(--dem-space-1);
+  font-size: var(--dem-text-xs);
+}
+.dem-source-refs {
+  flex-basis: 100%;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+}
+.dem-source-button {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  padding: 0 2px;
+  border: 0;
+  border-radius: var(--dem-radius-sm);
+  background: none;
+  color: var(--dem-faint);
+  font: inherit;
+  cursor: pointer;
+}
+.dem-source-button:hover {
+  background: var(--dem-hover);
+}
+.dem-recheck {
+  color: var(--dem-muted);
+}
+.dem-recheck[data-due] {
+  color: var(--dem-warn-text);
+}
+.dem-source-card {
+  width: 260px;
+  padding: var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+}
+.dem-source-card [role="dialog"] {
+  outline: none;
+}
+.dem-source-card h4 {
+  margin: var(--dem-space-3) 0 var(--dem-space-1);
+  font-size: var(--dem-text-xs);
+  font-weight: 500;
+  color: var(--dem-muted);
+}
+.dem-source-origin,
+.dem-source-note {
+  margin: 0 0 var(--dem-space-2);
+}
+.dem-source-note {
+  color: var(--dem-source-conflict);
+}
+.dem-source-date {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+}
+.dem-source-date input {
+  flex: 1;
+  min-width: 0;
+  padding: 2px var(--dem-space-1);
+  border: 1px solid var(--dem-paper-line);
+  border-radius: var(--dem-radius-sm);
+  background: none;
+  color: inherit;
+  font: inherit;
+}

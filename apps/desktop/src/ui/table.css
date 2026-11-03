@@ -1,0 +1,114 @@
+.dem-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-size: var(--dem-text-base);
+  outline: none;
+}
+.dem-table-col {
+  height: var(--dem-row-h);
+  padding: 0 var(--dem-row-pad);
+  border-bottom: 1px solid var(--dem-line);
+  font-size: var(--dem-text-sm);
+  font-weight: 500;
+  text-align: start;
+  color: var(--dem-muted);
+  cursor: default;
+  outline: none;
+}
+.dem-table-col[data-numeric],
+.dem-table-cell[data-numeric] {
+  text-align: end;
+  font-variant-numeric: tabular-nums;
+}
+.dem-table-col-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+}
+.dem-table-col[data-hovered][data-allows-sorting] {
+  color: var(--dem-text);
+}
+.dem-table-col[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: -2px;
+}
+.dem-table-row {
+  outline: none;
+  cursor: default;
+}
+/* Row states are drawn on the cells: a virtualized table positions each cell itself and the
+ * row element has no height of its own. */
+.dem-table-row[data-hovered] > .dem-table-cell {
+  background: var(--dem-hover);
+}
+.dem-table-row[data-selected] > .dem-table-cell {
+  background: color-mix(in srgb, var(--dem-accent) 14%, transparent);
+}
+.dem-table-row[data-focus-visible] > .dem-table-cell {
+  box-shadow:
+    inset 0 2px 0 var(--dem-accent-text),
+    inset 0 -2px 0 var(--dem-accent-text);
+}
+.dem-table-row[data-focus-visible] > .dem-table-cell:first-child {
+  box-shadow:
+    inset 2px 0 0 var(--dem-accent-text),
+    inset 0 2px 0 var(--dem-accent-text),
+    inset 0 -2px 0 var(--dem-accent-text);
+}
+.dem-table-row[data-focus-visible] > .dem-table-cell:last-child {
+  box-shadow:
+    inset -2px 0 0 var(--dem-accent-text),
+    inset 0 2px 0 var(--dem-accent-text),
+    inset 0 -2px 0 var(--dem-accent-text);
+}
+.dem-table-cell {
+  height: var(--dem-row-h);
+  padding: 0 var(--dem-row-pad);
+  border-bottom: 1px solid var(--dem-line);
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  outline: none;
+}
+.dem-table-cell[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: -2px;
+}
+
+/* A virtualized table scrolls itself; its parent gives it the height. */
+.dem-table[data-virtualized] {
+  display: block;
+  height: 100%;
+  overflow: auto;
+}
+.dem-table-select {
+  width: 36px;
+  padding-right: 0;
+}
+.dem-check {
+  display: inline-flex;
+  outline: none;
+}
+.dem-check-box {
+  display: grid;
+  place-items: center;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--dem-faint);
+  border-radius: var(--dem-radius-xs);
+  color: transparent;
+  transition:
+    background-color var(--dem-dur-fast) var(--dem-ease-standard),
+    border-color var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-check[data-selected] .dem-check-box,
+.dem-check[data-indeterminate] .dem-check-box {
+  border-color: var(--dem-accent-fill);
+  color: var(--dem-on-accent);
+  background: var(--dem-accent-fill);
+}
+.dem-check[data-focus-visible] .dem-check-box {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: 2px;
+}

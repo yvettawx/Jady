@@ -1,0 +1,69 @@
+.dem-privacy-picker {
+  display: inline-flex;
+  align-items: center;
+  min-width: 20px;
+  height: 20px;
+  padding: 0 2px;
+  border: 0;
+  border-radius: var(--dem-radius-xs);
+  font: inherit;
+  color: var(--dem-faint);
+  background: transparent;
+  cursor: default;
+  outline: none;
+}
+.dem-privacy-picker[data-hovered],
+.dem-privacy-picker[data-pressed] {
+  background: var(--dem-hover);
+}
+.dem-privacy-picker[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+}
+.dem-protected-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 6px;
+  border-radius: var(--dem-radius-pill);
+  font-size: 0.9em;
+  color: var(--dem-muted);
+  background: var(--dem-hover);
+}
+.dem-secret-gate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dem-space-3);
+  height: 100%;
+  padding: var(--dem-space-6);
+  text-align: center;
+  color: var(--dem-text);
+  background: var(--dem-paper);
+}
+.dem-secret-gate h2 {
+  margin: 0;
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-xl);
+}
+.dem-secret-gate p {
+  margin: 0;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-secret-icon {
+  color: var(--dem-privacy-secret);
+}
+.dem-secret-password {
+  display: grid;
+  gap: var(--dem-space-3);
+  width: min(280px, 100%);
+  text-align: start;
+}
+
+/* 可以联网给 AI 用, beside the 敏感 mark. */
+.dem-privacy-web {
+  display: inline-flex;
+  margin-left: var(--dem-space-1);
+  color: var(--dem-privacy-sensitive);
+}

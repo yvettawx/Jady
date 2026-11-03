@@ -1,0 +1,19 @@
+{
+  "name": "search in an unauthorized session",
+  "description": "Only normal items are searchable; sensitive, private and confidential items never influence results.",
+  "authorized": false,
+  "steps": [
+    { "call": { "tool": "search", "args": { "query": "bread", "limit": 50 } },
+      "expect": { "ok": true, "ids": ["n-001", "n-003"], "not_contains": ["{canary.sensitive}"] } },
+    { "call": { "tool": "search", "args": { "query": "", "limit": 50 } },
+      "expect": { "ok": true, "ids": ["n-001", "n-002", "n-003"] },
+      "note": "an empty query lists everything visible" },
+    { "call": { "tool": "search", "args": { "query": "rust" } },
+      "expect": { "ok": true, "ids": ["n-002"] } },
+    { "call": { "tool": "search", "args": { "query": "{canary.private}" } },
+      "expect": { "ok": true, "ids": [] },
+      "note": "searching for the canary itself finds nothing" },
+    { "call": { "tool": "search", "args": { "query": "kwsensitive" } },
+      "expect": { "ok": true, "ids": [] } }
+  ]
+}

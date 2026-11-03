@@ -1,0 +1,9 @@
+{
+  "id": "escape-check",
+  "name": { "zh-CN": "越狱检查", "en": "Escape check" },
+  "version": "1.0.0",
+  "description": { "en": "For the probes only: tries every way out it knows and reports." },
+  "permissions": ["items:read"],
+  "panels": [{ "id": "main", "title": { "en": "Escape check" } }],
+  "commands": [{ "id": "open", "title": { "en": "Escape check" }, "panel": "main" }]
+}

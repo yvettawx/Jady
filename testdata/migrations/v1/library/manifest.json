@@ -1,0 +1,30 @@
+{
+  "format": "dem-library",
+  "format_version": 1,
+  "library_id": "01a14d53-72ac-754b-8056-0024994a6f61",
+  "created": "2026-10-18T04:44:36.908753Z",
+  "kdf": {
+    "alg": "argon2id",
+    "version": 19,
+    "m_kib": 64,
+    "t": 1,
+    "p": 1,
+    "salt": "OWAixuouXrvS96MJE3TMOw=="
+  },
+  "wrapped_keys": [
+    {
+      "kind": "password",
+      "nonce": "OTiksnuhzYPwJXTguw2T3TBuErUQbAal",
+      "ciphertext": "PdqlOPjQjOMQ3QNi7NTYmO7DeO5K+CmXjPm7RerOMxtzrP+0Zd1RhI4LYeIJmca4"
+    },
+    {
+      "kind": "recovery",
+      "nonce": "ybYuEyDB9cHh8Ny0JXR8CC+h+QMgrsXe",
+      "ciphertext": "aGJbM2y3WsmyN/11KPlRfLX8TyW7H32p9yGiTuAqd2UTJrju6D6UYMT8DoJEZQJv"
+    }
+  ],
+  "file_key_ids": [
+    1
+  ],
+  "current_file_key_id": 1
+}

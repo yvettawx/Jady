@@ -1,0 +1,20 @@
+# Normalize line endings so macOS and Windows checkouts are byte-identical.
+* text=auto eol=lf
+
+# Windows-only scripts keep CRLF.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+*.ps1 text eol=crlf
+
+# Binary test fixtures (encrypted library samples, fonts, images) must never be converted.
+*.dexm binary
+*.sqlite binary
+*.png binary
+*.jpg binary
+*.ico binary
+*.icns binary
+*.ttf binary
+*.otf binary
+*.woff2 binary
+*.pdf binary
+*.zip binary

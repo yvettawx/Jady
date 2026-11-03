@@ -1,0 +1,46 @@
+.dem-tags {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dem-space-1);
+}
+.dem-tag-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dem-space-1);
+}
+.dem-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: 22px;
+  padding: 0 var(--dem-space-2);
+  border-radius: var(--dem-radius-xs);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-accent-text);
+  background: color-mix(in srgb, var(--dem-accent) 10%, transparent);
+  cursor: default;
+  outline: none;
+}
+.dem-tag-hash {
+  opacity: 0.6;
+}
+.dem-tag[data-hovered] {
+  background: color-mix(in srgb, var(--dem-accent) 18%, transparent);
+}
+.dem-tag[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: 1px;
+}
+.dem-tag-remove {
+  display: inline-flex;
+  margin-inline-end: -4px;
+  padding: 2px;
+  border: 0;
+  border-radius: var(--dem-radius-xs);
+  color: inherit;
+  background: transparent;
+  cursor: default;
+}
+.dem-tag-remove[data-hovered] {
+  background: var(--dem-hover);
+}

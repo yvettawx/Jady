@@ -1,0 +1,15 @@
+{
+  "name": "sensitive items in an authorized session",
+  "description": "An authorized session sees sensitive items; private and confidential stay hidden.",
+  "authorized": true,
+  "steps": [
+    { "call": { "tool": "search", "args": { "query": "bread", "limit": 50 } },
+      "expect": { "ok": true, "ids": ["n-001", "n-003", "s-001"] } },
+    { "call": { "tool": "read_item", "args": { "id": "s-001" } },
+      "expect": { "ok": true, "contains": ["{canary.sensitive}", "\"sensitive\":true"] } },
+    { "call": { "tool": "search", "args": { "query": "diary" } },
+      "expect": { "ok": true, "ids": [] } },
+    { "call": { "tool": "search", "args": { "query": "kwconfidential" } },
+      "expect": { "ok": true, "ids": [] } }
+  ]
+}

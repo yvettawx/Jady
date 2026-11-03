@@ -1,0 +1,722 @@
+{
+ "version": 1,
+ "description": "Search evaluation set (P0-37). Seeded from the P0-11 sample set (spikes/search/data/sample_queries.json); doc ids are strings so P1 can map them to item ids. Extended in P1 against dem-index.",
+ "k": 10,
+ "highlight_markers": [
+  "⁅",
+  "⁆"
+ ],
+ "docs": [
+  {
+   "id": "1",
+   "lang": "zh-Hans",
+   "title": "头发护理",
+   "body": "理发店的师傅说我的头发很健康。以后每个月去一次。"
+  },
+  {
+   "id": "2",
+   "lang": "zh-Hant",
+   "title": "頭髮護理",
+   "body": "理髮店的師傅說我的頭髮很健康。以後每個月去一次。"
+  },
+  {
+   "id": "3",
+   "lang": "zh-Hans",
+   "title": "发展规划",
+   "body": "公司的发展需要干部和技术人员。"
+  },
+  {
+   "id": "4",
+   "lang": "zh-Hant",
+   "title": "發展規劃",
+   "body": "公司的發展需要幹部和技術人員。"
+  },
+  {
+   "id": "5",
+   "lang": "zh-Hans",
+   "title": "皇后与王后",
+   "body": "皇后住在宫里。饼干很好吃，衣服已经干了。"
+  },
+  {
+   "id": "6",
+   "lang": "zh-Hant",
+   "title": "乾淨的房間",
+   "body": "房間很乾淨，樹幹很粗。乾隆皇帝也來過。"
+  },
+  {
+   "id": "7",
+   "lang": "txg",
+   "title": "西夏文",
+   "body": "西夏文字 𗀀𗀁𗀂𗀃 以及 𘀀𘀁。"
+  },
+  {
+   "id": "8",
+   "lang": "fr",
+   "title": "Café à Paris",
+   "body": "L'élève étudie à l'école. Noël approche, la crème brûlée est prête."
+  },
+  {
+   "id": "9",
+   "lang": "en",
+   "title": "Search engine notes",
+   "body": "The quick brown fox jumps over the lazy dog. SEARCH is case-insensitive."
+  },
+  {
+   "id": "10",
+   "lang": "de",
+   "title": "Straße",
+   "body": "Die Straße ist lang. Größe und Übung."
+  },
+  {
+   "id": "11",
+   "lang": "zh-Hans",
+   "title": "iPhone手机评测",
+   "body": "这款iPhone手机的电池续航很好。"
+  },
+  {
+   "id": "12",
+   "lang": "zh-Hant-HK",
+   "title": "衞生署通告",
+   "body": "香港的衞生署發佈了新指引，可以在綫上辦理。"
+  },
+  {
+   "id": "13",
+   "lang": "zh-Hant-TW",
+   "title": "臺灣天氣",
+   "body": "颱風來了，臺北下雨。屋裡面很安全。"
+  },
+  {
+   "id": "14",
+   "lang": "zh-Hans",
+   "title": "台湾天气",
+   "body": "台风来了，台北下雨。屋里面很安全。"
+  },
+  {
+   "id": "15",
+   "lang": "zh-Hant",
+   "title": "鐘錶店",
+   "body": "鐘錶店裏有一隻貓。"
+  },
+  {
+   "id": "16",
+   "lang": "zh-Hans",
+   "title": "钟表店",
+   "body": "钟表店里有一只猫。"
+  },
+  {
+   "id": "17",
+   "lang": "zh-Hans",
+   "title": "中华",
+   "body": "中国的华人很多。"
+  },
+  {
+   "id": "18",
+   "lang": "zh-Hans",
+   "title": "长文档",
+   "body": "这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。最后出现了独角兽。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。这是一段没有关键词的填充文字。"
+  },
+  {
+   "id": "19",
+   "lang": "zh-Hans",
+   "title": "生僻字",
+   "body": "古籍中的𠀀字和𠮷字。"
+  },
+  {
+   "id": "20",
+   "lang": "zh-Hant",
+   "title": "兼容汉字",
+   "body": "豈有此理。"
+  },
+  {
+   "id": "21",
+   "lang": "ja",
+   "title": "日本語",
+   "body": "東京で寿司を食べました。カタカナ"
+  },
+  {
+   "id": "22",
+   "lang": "en",
+   "title": "ＦＵＬＬＷＩＤＴＨ",
+   "body": "ＡＢＣ１２３ fullwidth text."
+  }
+ ],
+ "queries": [
+  {
+   "id": "zh1-fa",
+   "category": "zh-1char",
+   "query": "发",
+   "expected": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "12"
+   ],
+   "note": "发/發/髮 fold to 发; 發佈 in doc 12"
+  },
+  {
+   "id": "zh1-fa-trad",
+   "category": "trad-simp",
+   "query": "髮",
+   "expected": [
+    "1",
+    "2",
+    "3",
+    "4",
+    "12"
+   ],
+   "note": "1-char trad query; 發 and 髮 both fold to 发 (intended over-merge)"
+  },
+  {
+   "id": "zh2-toufa",
+   "category": "zh-2char",
+   "query": "头发",
+   "expected": [
+    "1",
+    "2"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh2-toufa-trad",
+   "category": "trad-simp",
+   "query": "頭髮",
+   "expected": [
+    "1",
+    "2"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh3-lifadian",
+   "category": "zh-phrase",
+   "query": "理发店",
+   "expected": [
+    "1",
+    "2"
+   ],
+   "note": "3 chars -> phrase of 2 bigrams"
+  },
+  {
+   "id": "zh2-yihou",
+   "category": "zh-2char",
+   "query": "以后",
+   "expected": [
+    "1",
+    "2"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh1-hou-trad",
+   "category": "trad-simp",
+   "query": "後",
+   "expected": [
+    "1",
+    "2",
+    "5",
+    "18"
+   ],
+   "note": "後 -> 后: also hits 皇后/王后 (doc 5) and 最后 (doc 18); one-to-many over-merge is intended"
+  },
+  {
+   "id": "zh2-huanghou",
+   "category": "zh-2char",
+   "query": "皇后",
+   "expected": [
+    "5"
+   ],
+   "note": "皇后 is not converted to 皇後"
+  },
+  {
+   "id": "zh1-gan",
+   "category": "zh-1char",
+   "query": "干",
+   "expected": [
+    "3",
+    "4",
+    "5",
+    "6"
+   ],
+   "note": "干/乾/幹"
+  },
+  {
+   "id": "zh2-ganbu",
+   "category": "zh-2char",
+   "query": "干部",
+   "expected": [
+    "3",
+    "4"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh2-ganjing-trad",
+   "category": "trad-simp",
+   "query": "乾淨",
+   "expected": [
+    "6"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh2-ganjing",
+   "category": "trad-simp",
+   "query": "干净",
+   "expected": [
+    "6"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh2-shugan",
+   "category": "trad-simp",
+   "query": "树干",
+   "expected": [
+    "6"
+   ],
+   "note": "樹幹"
+  },
+  {
+   "id": "zh2-qianlong",
+   "category": "trad-simp",
+   "query": "乾隆",
+   "expected": [
+    "6"
+   ],
+   "note": "char-level fold: 乾隆 -> 干隆 on both sides, still consistent"
+  },
+  {
+   "id": "zh2-weisheng-hk",
+   "category": "variant",
+   "query": "卫生",
+   "expected": [
+    "12"
+   ],
+   "note": "HK variant 衞 -> 衛 -> 卫"
+  },
+  {
+   "id": "zh2-xianshang-hk",
+   "category": "variant",
+   "query": "线上",
+   "expected": [
+    "12"
+   ],
+   "note": "HK variant 綫 -> 线"
+  },
+  {
+   "id": "zh2-fabu",
+   "category": "trad-simp",
+   "query": "发布",
+   "expected": [
+    "12"
+   ],
+   "note": "發佈"
+  },
+  {
+   "id": "zh2-taifeng",
+   "category": "trad-simp",
+   "query": "台风",
+   "expected": [
+    "13",
+    "14"
+   ],
+   "note": "颱風 / 台风"
+  },
+  {
+   "id": "zh2-taibei-trad",
+   "category": "trad-simp",
+   "query": "臺北",
+   "expected": [
+    "13",
+    "14"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh2-limian",
+   "category": "variant",
+   "query": "里面",
+   "expected": [
+    "13",
+    "14"
+   ],
+   "note": "TW 裡 / simp 里"
+  },
+  {
+   "id": "zh2-zhongbiao",
+   "category": "trad-simp",
+   "query": "钟表",
+   "expected": [
+    "15",
+    "16"
+   ],
+   "note": "鐘錶"
+  },
+  {
+   "id": "zh3-yizhimao",
+   "category": "trad-simp",
+   "query": "一只猫",
+   "expected": [
+    "15",
+    "16"
+   ],
+   "note": "一隻貓"
+  },
+  {
+   "id": "zh1-zhi",
+   "category": "zh-1char",
+   "query": "只",
+   "expected": [
+    "15",
+    "16"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh2-zhonghua",
+   "category": "zh-2char",
+   "query": "中华",
+   "expected": [
+    "17"
+   ],
+   "note": "title only"
+  },
+  {
+   "id": "zh2-huaren",
+   "category": "zh-2char",
+   "query": "华人",
+   "expected": [
+    "17"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh2-guohua-neg",
+   "category": "negative",
+   "query": "国华",
+   "expected": [],
+   "note": "国 and 华 not adjacent in doc 17"
+  },
+  {
+   "id": "zh3-dujiaoshou",
+   "category": "zh-phrase",
+   "query": "独角兽",
+   "expected": [
+    "18"
+   ],
+   "note": "needle in long doc (snippet test)"
+  },
+  {
+   "id": "zh-extb-1",
+   "category": "zh-1char",
+   "query": "𠮷",
+   "expected": [
+    "19"
+   ],
+   "note": "CJK Ext B (supplementary plane)"
+  },
+  {
+   "id": "zh-extb-2",
+   "category": "zh-1char",
+   "query": "𠀀",
+   "expected": [
+    "19"
+   ],
+   "note": ""
+  },
+  {
+   "id": "zh-compat",
+   "category": "zh-1char",
+   "query": "豈",
+   "expected": [
+    "20"
+   ],
+   "note": "U+F900 compatibility ideograph folds to U+8C48"
+  },
+  {
+   "id": "txg-1",
+   "category": "tangut",
+   "query": "𗀁",
+   "expected": [
+    "7"
+   ],
+   "note": "Tangut unigram"
+  },
+  {
+   "id": "txg-2",
+   "category": "tangut",
+   "query": "𗀁𗀂",
+   "expected": [
+    "7"
+   ],
+   "note": "Tangut bigram"
+  },
+  {
+   "id": "txg-3",
+   "category": "tangut",
+   "query": "𗀀𗀁𗀂𗀃",
+   "expected": [
+    "7"
+   ],
+   "note": "Tangut 4-char phrase"
+  },
+  {
+   "id": "txg-neg",
+   "category": "negative",
+   "query": "𗀀𗀂",
+   "expected": [],
+   "note": "not adjacent"
+  },
+  {
+   "id": "txg-4",
+   "category": "tangut",
+   "query": "𘀀𘀁",
+   "expected": [
+    "7"
+   ],
+   "note": ""
+  },
+  {
+   "id": "fr-cafe",
+   "category": "accent",
+   "query": "cafe",
+   "expected": [
+    "8"
+   ],
+   "note": ""
+  },
+  {
+   "id": "fr-cafe-upper",
+   "category": "accent",
+   "query": "CAFÉ",
+   "expected": [
+    "8"
+   ],
+   "note": ""
+  },
+  {
+   "id": "fr-eleve",
+   "category": "accent",
+   "query": "eleve",
+   "expected": [
+    "8"
+   ],
+   "note": "élève"
+  },
+  {
+   "id": "fr-ecole",
+   "category": "accent",
+   "query": "école",
+   "expected": [
+    "8"
+   ],
+   "note": "l'école -> l, ecole"
+  },
+  {
+   "id": "fr-creme",
+   "category": "accent",
+   "query": "creme brulee",
+   "expected": [
+    "8"
+   ],
+   "note": "two terms, AND"
+  },
+  {
+   "id": "fr-noel",
+   "category": "accent",
+   "query": "NOEL",
+   "expected": [
+    "8"
+   ],
+   "note": "Noël"
+  },
+  {
+   "id": "de-strasse",
+   "category": "accent",
+   "query": "strasse",
+   "expected": [
+    "10"
+   ],
+   "note": "ß case-folds to ss"
+  },
+  {
+   "id": "de-strasse2",
+   "category": "accent",
+   "query": "STRASSE",
+   "expected": [
+    "10"
+   ],
+   "note": ""
+  },
+  {
+   "id": "de-grosse",
+   "category": "accent",
+   "query": "grosse",
+   "expected": [
+    "10"
+   ],
+   "note": "Größe"
+  },
+  {
+   "id": "de-ubung",
+   "category": "accent",
+   "query": "ubung",
+   "expected": [
+    "10"
+   ],
+   "note": "Übung"
+  },
+  {
+   "id": "en-search",
+   "category": "latin",
+   "query": "search",
+   "expected": [
+    "9"
+   ],
+   "note": ""
+  },
+  {
+   "id": "en-and",
+   "category": "latin",
+   "query": "Search insensitive",
+   "expected": [
+    "9"
+   ],
+   "note": ""
+  },
+  {
+   "id": "en-neg",
+   "category": "negative",
+   "query": "search paris",
+   "expected": [],
+   "note": "AND of terms in different docs"
+  },
+  {
+   "id": "mix-iphone",
+   "category": "mixed",
+   "query": "iphone",
+   "expected": [
+    "11"
+   ],
+   "note": "iPhone inside CJK text"
+  },
+  {
+   "id": "mix-iphone-shouji",
+   "category": "mixed",
+   "query": "iphone手机",
+   "expected": [
+    "11"
+   ],
+   "note": "Latin+CJK in one term -> phrase"
+  },
+  {
+   "id": "zh2-shouji",
+   "category": "zh-2char",
+   "query": "手机",
+   "expected": [
+    "11"
+   ],
+   "note": ""
+  },
+  {
+   "id": "ja-sushi",
+   "category": "ja",
+   "query": "寿司",
+   "expected": [
+    "21"
+   ],
+   "note": ""
+  },
+  {
+   "id": "ja-kata",
+   "category": "ja",
+   "query": "カタカナ",
+   "expected": [
+    "21"
+   ],
+   "note": ""
+  },
+  {
+   "id": "ja-tokyo-simp",
+   "category": "ja",
+   "query": "东京",
+   "expected": [
+    "21"
+   ],
+   "note": "Japanese kanji are folded too (東 -> 东)"
+  },
+  {
+   "id": "fw-abc",
+   "category": "latin",
+   "query": "abc123",
+   "expected": [
+    "22"
+   ],
+   "note": "fullwidth NFKD"
+  },
+  {
+   "id": "neg-none",
+   "category": "negative",
+   "query": "不存在的词",
+   "expected": [],
+   "note": ""
+  }
+ ],
+ "highlights": [
+  {
+   "query": "头发",
+   "doc": "2",
+   "field": "title",
+   "expected": "⁅頭髮⁆護理"
+  },
+  {
+   "query": "理发店",
+   "doc": "2",
+   "field": "body",
+   "expected": "⁅理髮店⁆的師傅說我的頭髮很健康。以後每個月去一次。"
+  },
+  {
+   "query": "发",
+   "doc": "1",
+   "field": "body",
+   "expected": "理⁅发⁆店的师傅说我的头⁅发⁆很健康。以后每个月去一次。"
+  },
+  {
+   "query": "cafe",
+   "doc": "8",
+   "field": "title",
+   "expected": "⁅Café⁆ à Paris"
+  },
+  {
+   "query": "𗀁𗀂",
+   "doc": "7",
+   "field": "body",
+   "expected": "西夏文字 𗀀⁅𗀁𗀂⁆𗀃 以及 𘀀𘀁。"
+  },
+  {
+   "query": "creme brulee",
+   "doc": "8",
+   "field": "body",
+   "expected": "L'élève étudie à l'école. Noël approche, la ⁅crème⁆ ⁅brûlée⁆ est prête."
+  },
+  {
+   "query": "iphone手机",
+   "doc": "11",
+   "field": "body",
+   "expected": "这款⁅iPhone手机⁆的电池续航很好。"
+  },
+  {
+   "query": "树干",
+   "doc": "6",
+   "field": "body",
+   "expected": "房間很乾淨，⁅樹幹⁆很粗。乾隆皇帝也來過。"
+  },
+  {
+   "query": "𠮷",
+   "doc": "19",
+   "field": "body",
+   "expected": "古籍中的𠀀字和⁅𠮷⁆字。"
+  }
+ ]
+}

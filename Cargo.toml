@@ -1,0 +1,67 @@
+[workspace]
+resolver = "3"
+members = ["crates/*", "xtask", "apps/desktop/src-tauri"]
+# Spikes are throwaway experiments with their own workspaces and dependencies.
+exclude = ["spikes"]
+
+[workspace.package]
+version = "0.0.0"
+edition = "2024"
+rust-version = "1.99"
+license = "AGPL-3.0-only"
+publish = false
+
+[workspace.dependencies]
+# Internal crates
+dem-model = { path = "crates/dem-model" }
+dem-sandbox = { path = "crates/dem-sandbox" }
+dem-browser = { path = "crates/dem-browser" }
+dem-crypto = { path = "crates/dem-crypto" }
+dem-store = { path = "crates/dem-store" }
+dem-index = { path = "crates/dem-index" }
+dem-core = { path = "crates/dem-core" }
+dem-learn = { path = "crates/dem-learn" }
+dem-io = { path = "crates/dem-io" }
+dem-ai-gateway = { path = "crates/dem-ai-gateway" }
+dem-ai-provider = { path = "crates/dem-ai-provider" }
+dem-sync = { path = "crates/dem-sync" }
+dem-diag = { path = "crates/dem-diag" }
+dem-testkit = { path = "crates/dem-testkit" }
+
+# Common
+thiserror = "2"
+tracing = "0.1"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+jiff = { version = "0.2", features = ["serde"] }
+uuid = { version = "1", features = ["v7", "serde"] }
+tracing-subscriber = { version = "0.3", default-features = false, features = ["registry", "std"] }
+tracing-appender = "0.2"
+
+# Desktop app (exact pins: specta and tauri-specta are release candidates)
+tauri = "2.12"
+tauri-build = "2.7"
+specta = { version = "=2.0.0-rc.25", features = ["derive"] }
+tauri-specta = { version = "=2.0.0-rc.25", features = ["derive", "typescript"] }
+specta-typescript = "=0.0.12"
+
+# Dev
+proptest = "1"
+tempfile = "3"
+
+[workspace.lints.rust]
+unsafe_code = "deny"
+missing_debug_implementations = "warn"
+
+[workspace.lints.clippy]
+unwrap_used = "deny"
+expect_used = "warn"
+panic = "warn"
+dbg_macro = "deny"
+todo = "warn"
+print_stdout = "warn"
+print_stderr = "warn"
+
+[profile.dev.package."*"]
+# Dependencies (crypto, CRDT) are slow unoptimized; tests and benches run on them.
+opt-level = 2

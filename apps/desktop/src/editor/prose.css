@@ -1,0 +1,162 @@
+/* Long text (docs/05-design.md §15, B.3): the solid paper in every note. Written against the
+ * DOM ProseMirror produces (p, h1–h3, ul/ol > li > p, blockquote > p, pre > code, hr, marks),
+ * so the editor chosen in P1 takes it over unchanged. */
+.dem-prose {
+  max-width: var(--dem-measure-long);
+  margin: 0 auto;
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-long);
+  line-height: var(--dem-leading-long);
+  color: var(--dem-text);
+  /* A quarter-em between 汉字 and Latin letters or digits, and squeezed CJK punctuation where
+   * the engine supports it (Safari 18.4+, Chromium 140+); older engines just skip these. */
+  text-autospace: normal;
+  text-spacing-trim: normal;
+  hanging-punctuation: allow-end;
+  line-break: strict;
+  overflow-wrap: break-word;
+  font-kerning: normal;
+  caret-color: var(--dem-accent-text);
+  outline: none;
+}
+.dem-prose ::selection {
+  background: color-mix(in srgb, var(--dem-accent) 26%, transparent);
+}
+.dem-prose > :first-child {
+  margin-top: 0;
+}
+
+.dem-prose p {
+  margin: 0 0 0.85em;
+}
+.dem-prose :is(h1, h2, h3) {
+  font-weight: 700;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  text-wrap: balance;
+}
+.dem-prose h1 {
+  margin: 1.4em 0 0.6em;
+  font-size: 1.55em;
+}
+.dem-prose h2 {
+  margin: 1.5em 0 0.5em;
+  font-size: 1.28em;
+}
+.dem-prose h3 {
+  margin: 1.3em 0 0.4em;
+  font-size: 1.08em;
+}
+.dem-prose :is(h1, h2, h3) + p {
+  margin-top: 0;
+}
+
+.dem-prose :is(ul, ol) {
+  margin: 0 0 0.85em;
+  padding-left: 1.6em;
+}
+.dem-prose li > p {
+  margin: 0 0 0.2em;
+}
+.dem-prose li::marker {
+  color: var(--dem-faint);
+}
+.dem-prose ol > li::marker {
+  font-family: var(--dem-font-display);
+  font-size: 0.88em;
+  font-variant-numeric: tabular-nums;
+  color: var(--dem-muted);
+}
+/* Task lists: the check sits where the bullet would. */
+.dem-prose ul.dem-tasks {
+  padding-left: 0.2em;
+  list-style: none;
+}
+.dem-prose ul.dem-tasks > li {
+  display: flex;
+  gap: 0.55em;
+  align-items: baseline;
+}
+.dem-prose ul.dem-tasks > li > input {
+  flex: none;
+  width: 0.95em;
+  height: 0.95em;
+  margin: 0;
+  transform: translateY(0.12em);
+  accent-color: var(--dem-accent-fill);
+}
+.dem-prose ul.dem-tasks > li[data-checked="true"] > p {
+  color: var(--dem-muted);
+  text-decoration: line-through;
+  text-decoration-color: var(--dem-faint);
+}
+
+.dem-prose blockquote {
+  margin: 0 0 0.85em;
+  padding: 0.1em 0 0.1em 1em;
+  border-left: 3px solid color-mix(in srgb, var(--dem-accent) 45%, transparent);
+  color: var(--dem-muted);
+}
+.dem-prose blockquote > p:last-child {
+  margin-bottom: 0;
+}
+
+.dem-prose code {
+  padding: 0.08em 0.35em;
+  border-radius: var(--dem-radius-xs);
+  font-family: var(--dem-font-mono);
+  font-size: 0.86em;
+  background: var(--dem-hover);
+}
+.dem-prose strong {
+  font-weight: 700;
+}
+.dem-prose mark {
+  padding: 0 0.1em;
+  border-radius: 2px;
+  color: inherit;
+  background: color-mix(in srgb, var(--dem-warn) 30%, transparent);
+}
+.dem-prose a {
+  color: var(--dem-accent-text);
+  text-decoration: underline;
+  text-decoration-color: color-mix(in srgb, var(--dem-accent-text) 40%, transparent);
+  text-underline-offset: 0.18em;
+}
+.dem-prose hr {
+  margin: 1.6em 0;
+  border: 0;
+  border-top: 1px solid var(--dem-paper-line);
+}
+
+/* A link to another item: [[第 11 课]]. Missing targets look unfinished, not broken. */
+.dem-prose .dem-wikilink {
+  color: var(--dem-accent-text);
+  text-decoration: none;
+  background-image: linear-gradient(
+    color-mix(in srgb, var(--dem-accent-text) 35%, transparent),
+    color-mix(in srgb, var(--dem-accent-text) 35%, transparent)
+  );
+  background-position: 0 100%;
+  background-size: 100% 1px;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  transition: background-size var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-prose .dem-wikilink:hover,
+.dem-prose .dem-wikilink:focus-visible {
+  background-size: 100% 2px;
+  outline: none;
+}
+.dem-prose .dem-wikilink[data-missing] {
+  color: var(--dem-muted);
+  background-image: none;
+  text-decoration: underline dashed;
+  text-decoration-color: var(--dem-faint);
+  text-underline-offset: 0.18em;
+}
+
+/* Read mode: nothing invites typing. */
+.dem-prose[data-mode="read"] {
+  caret-color: transparent;
+}

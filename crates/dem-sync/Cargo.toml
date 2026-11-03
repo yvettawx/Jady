@@ -1,0 +1,21 @@
+[package]
+name = "dem-sync"
+description = "Sync between one's own computers (M10): moves ciphertext files; merging happens in dem-core."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+dem-crypto.workspace = true
+serde.workspace = true
+serde_json.workspace = true
+thiserror.workspace = true
+ureq = { version = "=3.4.2", features = ["json"] }
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

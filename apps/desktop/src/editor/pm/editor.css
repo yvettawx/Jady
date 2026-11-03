@@ -1,0 +1,141 @@
+/* The editor's own bits; the text itself is styled by prose.css, as everywhere long text shows. */
+.dem-pm-host {
+  position: relative;
+  min-height: 40vh;
+}
+.dem-pm-handle {
+  position: absolute;
+  left: -22px;
+  width: 14px;
+  height: 22px;
+  border-radius: var(--dem-radius-sm);
+  background-image: radial-gradient(var(--dem-faint) 1px, transparent 1.5px);
+  background-size: 5px 5px;
+  background-position: center;
+  cursor: grab;
+}
+.dem-pm-handle[hidden] {
+  display: none;
+}
+.dem-pm-handle:hover {
+  background-color: var(--dem-hover);
+}
+.dem-pm {
+  min-height: 40vh;
+  outline: none;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+.dem-pm .ProseMirror-selectednode {
+  outline: 2px solid var(--dem-accent);
+}
+.ProseMirror-gapcursor {
+  display: none;
+  pointer-events: none;
+  position: absolute;
+}
+.ProseMirror-gapcursor::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: -2px;
+  width: 20px;
+  border-top: 1px solid var(--dem-text);
+}
+.ProseMirror-focused .ProseMirror-gapcursor {
+  display: block;
+}
+.dem-pm-link {
+  display: inline;
+}
+.dem-pm-code .dem-block-head[hidden] {
+  display: none;
+}
+.dem-pm-code pre {
+  margin: 0;
+  padding: var(--dem-space-2) var(--dem-space-3);
+  overflow-x: auto;
+  font-family: var(--dem-font-mono);
+  font-size: var(--dem-text-sm);
+  white-space: pre;
+}
+.dem-pm-code code {
+  padding: 0;
+  background: none;
+}
+.dem-pm-diagram:not(:empty) {
+  padding: var(--dem-space-3);
+  border-top: 1px solid var(--dem-paper-line);
+  overflow-x: auto;
+}
+.dem-pm-diagram img,
+.dem-pm-diagram svg {
+  max-width: 100%;
+  height: auto;
+}
+.dem-image {
+  margin: 0 0 1em;
+}
+.dem-image img {
+  display: block;
+  max-width: 100%;
+  border-radius: var(--dem-radius-md);
+}
+.dem-image[data-missing] {
+  min-height: 48px;
+  border: 1px dashed var(--dem-paper-line);
+  border-radius: var(--dem-radius-md);
+}
+.dem-prose ul.dem-tasks > li > div {
+  flex: 1;
+  min-width: 0;
+}
+.dem-suggest {
+  position: fixed;
+  z-index: var(--dem-z-peek);
+  min-width: 200px;
+  max-width: 360px;
+  max-height: 280px;
+  margin: 0;
+  padding: var(--dem-space-1);
+  overflow: auto;
+  list-style: none;
+  font-size: var(--dem-text-sm);
+}
+.dem-suggest li {
+  padding: 3px var(--dem-space-2);
+  border-radius: var(--dem-radius-sm);
+  cursor: default;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dem-suggest li[aria-selected="true"] {
+  background: var(--dem-hover);
+}
+.dem-pm-failed {
+  color: var(--dem-danger-text);
+}
+.dem-pm-inter-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dem-space-3);
+  margin-bottom: var(--dem-space-2);
+}
+.dem-pm-inter-word {
+  display: inline-flex;
+  flex-direction: column;
+}
+.dem-pm-inter-word [data-layer="o"] {
+  font-size: var(--dem-text-long);
+  font-family: var(--dem-font-long), var(--dem-font-rare);
+}
+.dem-pm-inter-word [data-layer="t"],
+.dem-pm-inter-word [data-layer="g"] {
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+}
+.dem-pm-inter-tr {
+  margin: 0 0 var(--dem-space-2);
+  color: var(--dem-muted);
+}

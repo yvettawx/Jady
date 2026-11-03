@@ -1,0 +1,22 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "app": {
+    "windows": [
+      {
+        "title": "Jady",
+        "width": 1440,
+        "height": 900,
+        "titleBarStyle": "Overlay",
+        "hiddenTitle": true,
+        "trafficLightPosition": {
+          "x": 18,
+          "y": 22
+        },
+        "backgroundColor": "#f6f3f8",
+        "label": "main",
+        "minWidth": 720,
+        "minHeight": 480
+      }
+    ]
+  }
+}

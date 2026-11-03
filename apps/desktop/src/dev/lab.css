@@ -1,0 +1,173 @@
+.lab {
+  position: fixed;
+  inset: 0;
+  overflow: hidden;
+  background: var(--dem-canvas);
+}
+.lab-panel {
+  position: absolute;
+  z-index: var(--dem-z-panes);
+  box-sizing: border-box;
+  padding: var(--dem-space-3);
+  touch-action: none;
+}
+.lab-controls {
+  display: flex;
+  flex-direction: column;
+  gap: var(--dem-space-3);
+}
+.lab-status {
+  margin: 0;
+  font-size: var(--dem-text-xs);
+  color: var(--dem-on-glass-muted);
+}
+.lab-widget h2 {
+  margin: 0 0 var(--dem-space-2);
+  font-family: var(--dem-font-display);
+  font-size: var(--dem-text-sm);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.lab-widget p {
+  margin: 0 0 var(--dem-space-2);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-on-glass-muted);
+}
+.lab-paper {
+  position: absolute;
+  top: 16px;
+  left: 360px;
+  z-index: var(--dem-z-panes);
+  width: 520px;
+  height: 368px;
+  box-sizing: border-box;
+  padding: var(--dem-space-6);
+  border-radius: var(--dem-radius-xl);
+  background: var(--dem-paper);
+  box-shadow: var(--dem-shadow-3);
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-long);
+  line-height: var(--dem-leading-long);
+}
+.lab-paper h1 {
+  margin: 0 0 var(--dem-space-3);
+  font-size: var(--dem-text-xl);
+}
+.lab-result {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  z-index: var(--dem-z-float);
+  max-width: 600px;
+  margin: 0;
+  padding: var(--dem-space-2);
+  border-radius: var(--dem-radius-sm);
+  background: var(--dem-paper);
+  font-family: var(--dem-font-mono);
+  font-size: var(--dem-text-xs);
+  white-space: pre-wrap;
+}
+.lab-toolbar {
+  position: absolute;
+  top: 10px;
+  left: 16px;
+  right: 16px;
+  z-index: var(--dem-z-chrome);
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+}
+.lab-ws {
+  position: absolute;
+  inset: 48px 8px 8px;
+  z-index: var(--dem-z-panes);
+}
+.lab-quiet {
+  margin: 0;
+  padding: var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-on-glass-muted);
+}
+.lab-toolbar .lab-quiet {
+  padding: 0 var(--dem-space-2);
+}
+.lab-note {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  box-sizing: border-box;
+  padding: var(--dem-space-4);
+  background: var(--dem-paper);
+  font-family: var(--dem-font-long);
+}
+.lab-note h2 {
+  margin: 0 0 var(--dem-space-3);
+  font-size: var(--dem-text-lg);
+}
+.lab-note textarea {
+  flex: 1;
+  border: 0;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: var(--dem-text);
+  font: inherit;
+  font-size: var(--dem-text-long);
+}
+.lab-space {
+  padding: 2px var(--dem-space-2);
+  border-radius: var(--dem-radius-sm);
+  font-size: var(--dem-text-sm);
+  font-weight: 600;
+  background: color-mix(in srgb, var(--dem-accent) 18%, transparent);
+}
+.lab-titlebar-gap {
+  flex: 1;
+  align-self: stretch;
+}
+.lab-titlebar-checks h2 {
+  margin: 0 0 var(--dem-space-2);
+  font-size: var(--dem-text-md);
+}
+.lab-titlebar-checks ol {
+  margin: 0;
+  padding-inline-start: var(--dem-space-5);
+  font-size: var(--dem-text-base);
+  line-height: var(--dem-leading-long);
+}
+
+/* A pending AI proposal on the home review page (the queue is designed in P0.5-09). */
+.lab-prop {
+  padding: var(--dem-space-2) var(--dem-space-3);
+  border-radius: var(--dem-radius-md);
+  background: color-mix(in srgb, var(--dem-ai) 9%, var(--dem-paper));
+  font-size: var(--dem-text-sm);
+}
+.lab-prop p {
+  margin: 0 0 4px;
+}
+.lab-prop-ai {
+  margin-right: 6px;
+  padding: 0 5px;
+  border-radius: var(--dem-radius-sm);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-ai);
+  background: color-mix(in srgb, var(--dem-ai) 14%, transparent);
+}
+.lab-prop-where {
+  font-size: var(--dem-text-xs);
+  color: var(--dem-accent-text);
+}
+.lab-prop-diff {
+  padding: 4px 8px;
+  border-radius: var(--dem-radius-sm);
+  font-family: var(--dem-font-mono);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-ok);
+  background: color-mix(in srgb, var(--dem-ok) 10%, transparent);
+}
+.lab-prop-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--dem-space-2);
+}

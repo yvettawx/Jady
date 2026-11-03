@@ -1,0 +1,23 @@
+[package]
+name = "dem-io"
+description = "Import, export and file text extraction."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+thiserror.workspace = true
+csv = "1"
+calamine = { version = "0.38", features = ["dates"] }
+pdf-extract = "0.12"
+zip = { version = "9", default-features = false, features = ["deflate"] }
+quick-xml = "0.42"
+ureq = "=3.4.2"
+
+[dev-dependencies]
+tempfile = "3"
+
+[lints]
+workspace = true

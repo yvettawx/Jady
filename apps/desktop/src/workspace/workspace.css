@@ -1,0 +1,155 @@
+.dem-workspace {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+.dem-workspace > .dockview-theme-dem {
+  width: 100%;
+  height: 100%;
+}
+.dockview-theme-dem {
+  --dv-paneview-active-outline-color: var(--dem-accent);
+  --dv-tabs-and-actions-container-background-color: transparent;
+  --dv-activegroup-visiblepanel-tab-background-color: transparent;
+  --dv-activegroup-hiddenpanel-tab-background-color: transparent;
+  --dv-inactivegroup-visiblepanel-tab-background-color: transparent;
+  --dv-inactivegroup-hiddenpanel-tab-background-color: transparent;
+  --dv-group-view-background-color: transparent;
+  --dv-tab-divider-color: transparent;
+  --dv-separator-border: transparent;
+  --dv-drag-over-background-color: color-mix(in srgb, var(--dem-accent) 22%, transparent);
+  --dv-drag-over-border-color: var(--dem-accent);
+  --dv-tabs-and-actions-container-height: calc(var(--dem-row-h) + 14px);
+  --dv-activegroup-visiblepanel-tab-color: var(--dem-on-glass);
+  --dv-inactivegroup-visiblepanel-tab-color: var(--dem-on-glass-muted);
+  --dv-background-color: transparent;
+  --dv-border-radius: var(--dem-radius-xl);
+  --dv-tabs-and-actions-container-font-size: var(--dem-text-sm);
+}
+/* Groups also carry .dem-glass (added by Workspace), which paints them; dockview's own
+ * group background would otherwise win on specificity. */
+.dockview-theme-dem .dv-groupview {
+  border-radius: var(--dem-radius-xl);
+  overflow: hidden;
+}
+.dockview-theme-dem .dv-groupview.dem-glass {
+  background: var(--dem-glass);
+  /* dockview wraps each cell in a square box that clips overflow, so a large shadow is cut
+   * off square outside the rounded corners. The 8 px gaps have no room for one anyway. */
+  box-shadow: var(--dem-shadow-1);
+}
+.dockview-theme-dem .dv-groupview.dem-glass[data-refract] {
+  background: transparent;
+}
+:root[data-reduce-transparency] .dockview-theme-dem .dv-groupview.dem-glass {
+  background: var(--dem-paper);
+}
+/* Everything inside a cell is concentric with it: an inset of --ws-inset, and inner radii of
+ * the cell radius minus that inset, so corners never meet at odd angles. */
+.dockview-theme-dem {
+  --ws-inset: 7px;
+  --ws-inner-radius: calc(var(--dem-radius-xl) - var(--ws-inset));
+}
+.dockview-theme-dem .dv-tabs-and-actions-container {
+  padding: var(--ws-inset) var(--ws-inset) 0;
+  gap: var(--dem-space-1);
+}
+.dockview-theme-dem .dv-tabs-container {
+  gap: var(--dem-space-1);
+}
+/* The content is a sheet of paper floating on the glass, not glued to its edges. Padding, not
+ * margin: the drop zones cover the content container, so the inset must stay inside it. */
+.dockview-theme-dem .dv-content-container {
+  padding: var(--ws-inset);
+}
+.dockview-theme-dem .dv-content-container > * {
+  border-radius: var(--ws-inner-radius);
+  overflow: hidden;
+}
+.dockview-theme-dem {
+  --dv-transition-duration: var(--dem-dur-base);
+  --dv-tab-drop-indicator-color: var(--dem-accent);
+}
+/* Tabs shrink before they overflow; the overflow menu takes what still does not fit. */
+.dockview-theme-dem .dv-tab {
+  flex-shrink: 1;
+  /* Room for the icon and a few characters; past that, tabs go to the overflow menu. */
+  min-width: 92px;
+  padding: 0 1px;
+}
+.dockview-theme-dem .dv-tab .dem-ws-tab,
+.dockview-theme-dem .dv-tab .dem-ctab {
+  min-width: 0;
+  max-width: 100%;
+}
+.dockview-theme-dem .dv-tabs-overflow-dropdown-default {
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+  height: calc(var(--dem-row-h) - 4px);
+  margin: 0 var(--dem-space-1);
+  padding: 0 var(--dem-space-2);
+  border-radius: var(--dem-radius-sm);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-on-glass-muted);
+  background: color-mix(in srgb, var(--dem-paper) 45%, transparent);
+}
+/* The tab being dragged follows the pointer as a small paper chip. dockview attaches the
+ * ghost to <body>, outside the theme class, so these rules are not scoped to it. */
+.dv-tab-ghost-drag::after {
+  display: none;
+}
+.dv-tab-ghost-drag .dem-ctab {
+  color: var(--dem-text);
+  background: color-mix(in srgb, var(--dem-paper) 92%, transparent);
+  box-shadow: var(--dem-shadow-3);
+  transform: scale(1.04);
+}
+.dockview-theme-dem .dv-tab:focus-visible {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: -2px;
+}
+.dem-ws-tab {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+.dockview-theme-dem .dv-tab .dem-ctab {
+  height: var(--dem-row-h);
+  padding: 0 var(--dem-space-2) 0 var(--dem-space-3);
+  gap: var(--dem-space-2);
+  border-radius: var(--ws-inner-radius);
+}
+.dockview-theme-dem .dv-tab.dv-active-tab .dem-ctab-close {
+  opacity: 1;
+}
+.dockview-theme-dem .dv-tab.dv-active-tab .dem-ctab {
+  color: var(--dem-on-glass);
+  background: color-mix(in srgb, var(--dem-paper) 70%, transparent);
+  box-shadow: var(--dem-shadow-1);
+}
+.dockview-theme-dem .dv-drop-target-dropzone > .dv-drop-target-selection {
+  border-radius: var(--ws-inner-radius);
+  transition:
+    top var(--dem-dur-fast) var(--dem-ease-standard),
+    left var(--dem-dur-fast) var(--dem-ease-standard),
+    width var(--dem-dur-fast) var(--dem-ease-standard),
+    height var(--dem-dur-fast) var(--dem-ease-standard),
+    opacity var(--dem-dur-fast) var(--dem-ease-standard);
+}
+
+/* 竖排: each cell shows a thin title, the active tab only; switching happens in 打开的内容. */
+.dem-workspace[data-tabs="vertical"] .dv-tab:not(.dv-active-tab) {
+  display: none;
+}
+.dem-workspace[data-tabs="vertical"] .dem-ctab-close,
+.dem-workspace[data-tabs="vertical"] .dv-tabs-overflow-dropdown-default,
+.dem-workspace[data-tabs="vertical"] .dv-tabs-overflow-container {
+  display: none;
+}
+
+/* While dragging, stop re-blurring every pane each frame (only matters for the CSS fallback). */
+.dem-workspace[data-dragging] .dem-glass {
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}

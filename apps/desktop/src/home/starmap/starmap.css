@@ -1,0 +1,67 @@
+/* Its parts are fixed layers; the wrapper itself takes no place in the shell's grid. */
+.dem-starmap {
+  display: contents;
+}
+.dem-starmap[hidden] {
+  display: none;
+}
+.dem-starmap-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: var(--dem-z-scene);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+.dem-starmap-labels {
+  position: fixed;
+  inset: 0;
+  z-index: var(--dem-z-panes);
+  pointer-events: none;
+}
+/* Name over count, centred above the cluster (P0.5 visual final). */
+.dem-starmap-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: grid;
+  justify-items: center;
+  gap: 1px;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--dem-dur-slow) var(--dem-ease-standard);
+}
+.dem-starmap-label b {
+  font-size: var(--dem-text-sm);
+  font-weight: 600;
+  color: var(--dem-on-glass);
+  text-shadow: 0 1px 10px color-mix(in srgb, var(--dem-canvas) 70%, transparent);
+}
+.dem-starmap-label i {
+  font-style: normal;
+  font-family: var(--dem-font-mono);
+  font-size: 10px;
+  color: var(--dem-on-glass-muted);
+}
+.dem-starmap-tip {
+  position: fixed;
+  z-index: var(--dem-z-peek);
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  height: 26px;
+  padding: 0 var(--dem-space-3);
+  border-radius: var(--dem-radius-sm);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-text);
+  background: var(--dem-paper);
+  box-shadow: var(--dem-shadow-2);
+  white-space: nowrap;
+  pointer-events: none;
+}
+.dem-starmap-tip span {
+  color: var(--dem-accent-text);
+}
+.dem-starmap-tip span:last-child {
+  color: var(--dem-muted);
+}

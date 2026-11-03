@@ -1,0 +1,98 @@
+/* Shared by List and Tree rows. */
+.dem-list,
+.dem-tree {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  outline: none;
+}
+.dem-list-row,
+.dem-tree-row {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  min-height: var(--dem-row-h);
+  padding: 2px var(--dem-row-pad);
+  border-radius: var(--dem-radius-sm);
+  font-size: var(--dem-text-base);
+  color: inherit;
+  cursor: default;
+  outline: none;
+}
+.dem-list-row[data-hovered],
+.dem-tree-row[data-hovered] {
+  background: var(--dem-hover);
+}
+.dem-list-row[data-selected],
+.dem-tree-row[data-selected] {
+  background: color-mix(in srgb, var(--dem-accent) 14%, transparent);
+}
+.dem-list-row[data-focus-visible],
+.dem-tree-row[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: -2px;
+}
+.dem-list-row[data-disabled],
+.dem-tree-row[data-disabled] {
+  opacity: 0.45;
+}
+.dem-list-icon {
+  flex: none;
+  color: var(--dem-muted);
+}
+.dem-list-text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+.dem-list-title {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dem-list-desc {
+  overflow: hidden;
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dem-list-meta {
+  flex: none;
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+  font-variant-numeric: tabular-nums;
+}
+
+.dem-tree-row {
+  padding-inline-start: calc(var(--dem-row-pad) + (var(--level) - 1) * 14px);
+  gap: var(--dem-space-1);
+}
+.dem-tree-chevron {
+  display: inline-flex;
+  flex: none;
+  padding: 2px;
+  border: 0;
+  border-radius: var(--dem-radius-xs);
+  color: var(--dem-muted);
+  background: transparent;
+  cursor: default;
+  transition: transform var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-tree-chevron[data-expanded] {
+  transform: rotate(90deg);
+}
+.dem-tree-spacer {
+  flex: none;
+  width: 18px;
+}
+.dem-tree-row .dem-list-icon {
+  margin-inline-end: 2px;
+}
+/* The tree item element takes focus; its inner row draws the states. */
+.dem-tree-row-host {
+  outline: none;
+}

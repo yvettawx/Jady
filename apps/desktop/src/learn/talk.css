@@ -1,0 +1,164 @@
+.dem-talk {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--dem-paper);
+  color: var(--dem-text);
+  container-type: inline-size;
+}
+.dem-talk-head {
+  display: flex;
+  flex: none;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--dem-space-2) var(--dem-space-3);
+  padding: var(--dem-space-2) var(--dem-space-4);
+  border-bottom: 1px solid var(--dem-paper-line);
+}
+.dem-talk-head h2 {
+  margin: 0;
+  font-size: var(--dem-text-md);
+}
+/* 今天要顺带复习的词 */
+.dem-talk-due {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dem-space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-talk-due li {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  padding: 0 var(--dem-space-2);
+  border-radius: var(--dem-radius-pill);
+  background: var(--dem-hover);
+}
+.dem-talk-due li[data-done] {
+  color: var(--dem-ok-text);
+  background: color-mix(in srgb, var(--dem-ok) 14%, transparent);
+}
+.dem-talk-body {
+  display: grid;
+  flex: 1;
+  grid-template-columns: minmax(0, 1fr) 280px;
+  min-height: 0;
+}
+.dem-talk-main {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  min-height: 0;
+}
+.dem-talk-turns {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: var(--dem-space-4);
+  min-height: 0;
+  padding: var(--dem-space-5);
+  overflow: auto;
+}
+.dem-talk-turns > * {
+  flex: none;
+}
+.dem-talk-turn {
+  max-width: 78%;
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-lg);
+  line-height: var(--dem-leading-long);
+  transition: opacity var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-talk-turn p {
+  margin: 0;
+}
+.dem-talk-turn[data-who="me"] {
+  align-self: flex-end;
+  padding: var(--dem-space-1) var(--dem-space-3);
+  border-radius: var(--dem-radius-lg);
+  background: var(--dem-hover);
+}
+.dem-talk-turn[data-lit] {
+  outline: 2px solid color-mix(in srgb, var(--dem-accent) 50%, transparent);
+  outline-offset: 2px;
+}
+.dem-talk-gloss {
+  margin-top: 2px;
+  font-family: var(--dem-font-ui);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+/* Clear of the AI button in the corner: the column beside it holds the corrections. */
+.dem-talk-compose {
+  padding-left: var(--dem-space-5);
+}
+.dem-talk-fixes {
+  min-height: 0;
+  padding: var(--dem-space-4) var(--dem-space-3) 76px;
+  border-left: 1px solid var(--dem-paper-line);
+  overflow: auto;
+}
+.dem-talk-fixes h3 {
+  margin: 0 0 var(--dem-space-2);
+  padding: 0 var(--dem-space-1);
+  font-size: var(--dem-text-sm);
+  font-weight: 500;
+  color: var(--dem-muted);
+}
+.dem-talk-fixes ul {
+  display: grid;
+  gap: var(--dem-space-1);
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dem-talk-none {
+  margin: 0;
+  padding: 0 var(--dem-space-1);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-muted);
+}
+.dem-talk-fix {
+  display: grid;
+  gap: 2px;
+  width: 100%;
+  padding: var(--dem-space-1);
+  border: 0;
+  border-radius: var(--dem-radius-sm);
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: var(--dem-text-sm);
+  text-align: left;
+  cursor: default;
+  animation: dem-talk-fix-in var(--dem-dur-slow) var(--dem-ease-standard);
+}
+@keyframes dem-talk-fix-in {
+  from {
+    opacity: 0;
+  }
+}
+.dem-talk-fix:hover,
+.dem-talk-fix:focus-visible {
+  background: var(--dem-hover);
+  outline: none;
+}
+.dem-talk-fix small {
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+}
+/* A narrow cell: corrections go underneath, never over the conversation. */
+@container (width < 640px) {
+  .dem-talk-body {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: minmax(0, 1fr) minmax(0, 30%);
+  }
+  .dem-talk-fixes {
+    border-top: 1px solid var(--dem-paper-line);
+    border-left: 0;
+  }
+}

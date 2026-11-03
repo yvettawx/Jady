@@ -1,0 +1,258 @@
+/* The home page fills the workspace area and is itself the widget grid: 12 columns, rows of
+ * 78 px with the gap, below the header. Its own background is the scene's hit area, so the
+ * empty middle (where the star map shows) takes hover and clicks. */
+.dem-home {
+  --home-head: 112px;
+  position: absolute;
+  inset: 0;
+  z-index: var(--dem-z-panes);
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-auto-rows: 66px;
+  align-content: start;
+  gap: var(--dem-space-3);
+  padding: var(--home-head) var(--dem-space-4) var(--dem-space-4);
+  overflow: hidden;
+}
+.dem-home > * {
+  min-width: 0;
+  min-height: 0;
+}
+
+.dem-home-head {
+  position: absolute;
+  top: var(--dem-space-1);
+  right: var(--dem-space-4);
+  left: var(--dem-space-4);
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  pointer-events: none;
+}
+.dem-home-head > * {
+  pointer-events: auto;
+}
+.dem-home-hero {
+  display: grid;
+  gap: 2px;
+  color: var(--dem-on-glass);
+  text-shadow: 0 1px 14px color-mix(in srgb, var(--dem-canvas) 55%, transparent);
+}
+.dem-home-cap {
+  font-family: var(--dem-font-display);
+  font-size: 8.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--dem-on-glass-muted);
+}
+.dem-home-clock {
+  display: flex;
+  align-items: baseline;
+  gap: var(--dem-space-2);
+  margin: 4px 0 2px;
+  font-family: var(--dem-font-display);
+  font-size: var(--dem-text-display);
+  font-weight: 300;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  letter-spacing: 0.01em;
+}
+.dem-home-clock small {
+  font-size: var(--dem-text-base);
+  font-weight: 400;
+  color: var(--dem-on-glass-muted);
+}
+.dem-home-greet {
+  display: flex;
+  gap: var(--dem-space-3);
+  margin: 0;
+  font-size: var(--dem-text-base);
+}
+.dem-home-actions {
+  display: flex;
+  gap: var(--dem-space-2);
+  margin-top: var(--dem-space-2);
+}
+
+.dem-home-widget {
+  display: flex;
+  flex-direction: column;
+  border-radius: var(--dem-radius-xl);
+  box-shadow: var(--dem-shadow-1);
+  overflow: hidden;
+}
+.dem-home-widget-title {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: 6px;
+  height: 36px;
+  margin: 0;
+  padding: 0 var(--dem-space-4);
+  font-size: var(--dem-text-sm);
+  font-weight: 600;
+  color: var(--dem-on-glass);
+}
+.dem-home-widget[data-editing] .dem-home-widget-title {
+  cursor: grab;
+}
+.dem-home-widget[data-editing] .dem-home-widget-body {
+  pointer-events: none;
+}
+.dem-home-widget-remove {
+  margin-left: auto;
+}
+.dem-home-widget-resize {
+  position: absolute;
+  right: 4px;
+  bottom: 4px;
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid var(--dem-on-glass-muted);
+  border-bottom: 2px solid var(--dem-on-glass-muted);
+  border-radius: 0 0 4px 0;
+  cursor: nwse-resize;
+}
+.dem-home-widget-title svg {
+  color: var(--dem-on-glass-muted);
+}
+.dem-home-widget-body {
+  flex: 1;
+  min-height: 0;
+  padding: 0 var(--dem-space-4) var(--dem-space-3);
+  overflow: auto;
+  line-height: 1.4;
+  color: var(--dem-on-glass);
+}
+/* The card already keeps its edge; text that pads itself for use in a pane lines up here. */
+.dem-home-widget-body > .dem-life-none {
+  padding: var(--dem-space-1) 0;
+}
+.dem-home-widget-body > .dem-widget-empty {
+  margin-top: var(--dem-space-1);
+}
+/* A wide, short card: the button sits beside the tips rather than under them. */
+.dem-home-widget-body > .dem-tips {
+  flex-flow: row wrap;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: var(--dem-space-1) 0 0;
+}
+
+/* Panels that float out of the leftmost bar on the home page. (.dem-glass sets position:
+ * relative, hence the doubled class.) */
+.dem-glass.dem-home-float {
+  position: absolute;
+  top: 0;
+  bottom: var(--dem-space-6);
+  left: 0;
+  z-index: var(--dem-z-float);
+  display: flex;
+  flex-direction: column;
+  width: min(320px, 80%);
+  border-radius: var(--dem-radius-xl);
+  box-shadow: var(--dem-shadow-2);
+  overflow: hidden;
+  animation: dem-float-in var(--dem-dur-base) var(--dem-ease-spring);
+}
+.dem-home-float-title {
+  margin: 0;
+  padding: var(--dem-space-3) var(--dem-space-4) var(--dem-space-1);
+  font-size: var(--dem-text-xs);
+  font-weight: 600;
+  color: var(--dem-on-glass-muted);
+}
+.dem-home-float-body {
+  flex: 1;
+  min-height: 0;
+  padding: 0 var(--dem-space-2) var(--dem-space-3);
+  overflow: auto;
+}
+@keyframes dem-float-in {
+  from {
+    opacity: 0;
+    transform: translateX(-12px);
+  }
+}
+
+.dem-widget-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dem-widget-row {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--dem-space-3);
+  width: 100%;
+  padding: var(--dem-space-2) var(--dem-space-1);
+  border: 0;
+  border-radius: var(--dem-radius-sm);
+  font: inherit;
+  font-size: var(--dem-text-sm);
+  text-align: left;
+  color: inherit;
+  background: transparent;
+  cursor: default;
+}
+.dem-widget-row:hover {
+  background: var(--dem-hover);
+}
+.dem-widget-row:focus-visible {
+  outline: 2px solid var(--dem-accent-text);
+}
+.dem-widget-row-title {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.dem-widget-row-meta {
+  flex: none;
+  font-size: var(--dem-text-xs);
+  color: var(--dem-on-glass-muted);
+}
+.dem-widget-empty {
+  margin: var(--dem-space-2) 0;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-on-glass-muted);
+}
+.dem-todo {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  padding: var(--dem-space-1) var(--dem-space-1);
+  border-radius: var(--dem-radius-sm);
+  font-size: var(--dem-text-sm);
+  outline: none;
+}
+.dem-todo[data-hovered] {
+  background: var(--dem-hover);
+}
+.dem-todo[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+}
+.dem-todo-box {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 16px;
+  height: 16px;
+  border: 1.5px solid var(--dem-on-glass-muted);
+  border-radius: 5px;
+  color: transparent;
+  transition:
+    background-color var(--dem-dur-fast) var(--dem-ease-standard),
+    border-color var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-todo[data-selected] .dem-todo-box {
+  border-color: var(--dem-accent-fill);
+  color: var(--dem-on-accent);
+  background: var(--dem-accent-fill);
+}
+.dem-todo[data-selected] .dem-todo-title {
+  color: var(--dem-on-glass-muted);
+  text-decoration: line-through;
+}

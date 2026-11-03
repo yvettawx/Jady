@@ -1,0 +1,40 @@
+# Rust
+/target/
+**/target/
+
+# Node / frontend
+node_modules/
+dist/
+*.tsbuildinfo
+.vite/
+
+# Tauri generated
+apps/desktop/src-tauri/gen/
+
+# Test and benchmark output (generated libraries, reports)
+/tmp/
+*.profraw
+/bench-out/
+/testdata/generated/
+
+# Local diagnostic logs
+*.log
+
+# Editors and OS
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/*
+!.vscode/extensions.json
+*.swp
+
+# Secrets must never be committed
+.env
+.env.*
+
+# Fonts downloaded at build time (apps/desktop/fonts.json)
+apps/desktop/public/fonts/
+# Fonts the dev server serves but releases fetch on demand (fonts.json devOnly)
+apps/desktop/.dev-fonts/
+apps/desktop/.perf/
+apps/desktop/probe/shots/

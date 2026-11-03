@@ -1,0 +1,72 @@
+/* Liquid glass (docs/05-design.md §15, appendix B.2). The pseudo-elements sit between the
+ * panel's paint and its content: ::before is the rim, brightest where the pointer is;
+ * ::after is the soft highlight that follows the pointer. */
+.dem-glass {
+  position: relative;
+  isolation: isolate;
+  border-radius: var(--dem-radius-xl);
+  background: var(--dem-glass);
+  -webkit-backdrop-filter: blur(var(--dem-glass-blur)) saturate(1.8);
+  backdrop-filter: blur(var(--dem-glass-blur)) saturate(1.8);
+  box-shadow: var(--dem-shadow-3);
+  color: var(--dem-on-glass);
+}
+/* The WebGL layer has already painted blur, refraction and tint underneath. */
+.dem-glass[data-refract] {
+  background: transparent;
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+.dem-glass::before,
+.dem-glass::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  pointer-events: none;
+}
+/* The rim is a soft light, not a hard white line. */
+.dem-glass::before {
+  opacity: 0.6;
+  padding: 1px;
+  background: conic-gradient(
+    from var(--glass-angle, 0deg),
+    var(--dem-glass-rim-1),
+    var(--dem-glass-rim-2) 25%,
+    var(--dem-glass-rim-3) 50%,
+    var(--dem-glass-rim-4) 75%,
+    var(--dem-glass-rim-1)
+  );
+  -webkit-mask:
+    linear-gradient(#000 0 0) content-box,
+    linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+.dem-glass::after {
+  background: radial-gradient(
+    circle 220px at var(--glass-x, 30%) var(--glass-y, 0%),
+    var(--dem-glass-spec),
+    transparent 70%
+  );
+  opacity: 0.55;
+}
+:root[data-reduce-transparency] .dem-glass {
+  background: var(--dem-paper);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  color: var(--dem-text);
+}
+:root[data-reduce-transparency] .dem-glass::after {
+  display: none;
+}
+/* The WebGL canvas overrides width and height inline: its buffer is screen-sized (renderer.ts). */
+.dem-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: var(--dem-z-scene);
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}

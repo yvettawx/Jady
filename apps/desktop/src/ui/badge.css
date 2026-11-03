@@ -1,0 +1,60 @@
+.dem-badge,
+.dem-mark {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-size: var(--dem-text-xs);
+  line-height: var(--dem-leading-tight);
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.dem-badge {
+  --tone: var(--dem-muted);
+  padding: 1px var(--dem-space-2);
+  border-radius: var(--dem-radius-pill);
+  color: var(--tone);
+  background: color-mix(in srgb, var(--tone) 12%, transparent);
+}
+.dem-badge[data-tone="accent"] {
+  --tone: var(--dem-accent-text);
+}
+.dem-badge[data-tone="ai"] {
+  --tone: var(--dem-ai-text);
+}
+.dem-badge[data-tone="ok"] {
+  --tone: var(--dem-ok-text);
+}
+.dem-badge[data-tone="warn"] {
+  --tone: var(--dem-warn-text);
+}
+.dem-badge[data-tone="danger"] {
+  --tone: var(--dem-danger-text);
+}
+
+/* Marks are quiet: coloured text and an icon, no fill (docs/05-design.md §14). */
+.dem-mark[data-privacy="sensitive"] {
+  color: var(--dem-privacy-sensitive);
+}
+.dem-mark[data-privacy="private"] {
+  color: var(--dem-privacy-private);
+}
+.dem-mark[data-privacy="secret"] {
+  color: var(--dem-privacy-secret);
+}
+.dem-mark[data-source="mine"],
+.dem-mark[data-source="import"] {
+  color: var(--dem-muted);
+}
+.dem-mark[data-source="aiMemory"] {
+  color: var(--dem-source-ai-memory);
+}
+.dem-mark[data-source="aiSearch"] {
+  color: var(--dem-source-ai-search);
+}
+.dem-mark[data-source="unverified"] {
+  color: var(--dem-source-unverified);
+}
+.dem-mark[data-source="conflict"] {
+  color: var(--dem-source-conflict);
+}

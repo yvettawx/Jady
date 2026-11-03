@@ -1,0 +1,70 @@
+/* Bottom right, above the AI button, over content: CSS-blurred glass (B.2). */
+.dem-glass.dem-ask {
+  position: fixed;
+  right: 20px;
+  bottom: 96px;
+  z-index: var(--dem-z-float);
+  display: flex;
+  flex-direction: column;
+  width: min(380px, 90vw);
+  border-radius: var(--dem-radius-xl);
+  box-shadow: var(--dem-shadow-3);
+  outline: none;
+  transform-origin: 90% 100%;
+  animation: dem-ask-in var(--dem-dur-slow) var(--dem-ease-spring);
+}
+@keyframes dem-ask-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px) scale(0.92);
+  }
+}
+.dem-ask-head {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  height: 40px;
+  padding: 0 var(--dem-space-1) 0 var(--dem-space-4);
+  font-size: var(--dem-text-sm);
+  font-weight: 600;
+  color: var(--dem-ai-text);
+}
+.dem-ask-scope {
+  padding: 0 6px;
+  border-radius: var(--dem-radius-pill);
+  font-weight: 500;
+  color: var(--dem-on-glass);
+  background: var(--dem-hover);
+}
+.dem-ask-gap {
+  flex: 1;
+}
+.dem-ask-body {
+  display: grid;
+  gap: var(--dem-space-2);
+  padding: 0 var(--dem-space-4) var(--dem-space-4);
+}
+.dem-ask-me,
+.dem-ask-ai {
+  margin: 0;
+  padding: var(--dem-space-2) var(--dem-space-3);
+  border-radius: var(--dem-radius-lg);
+  font-size: var(--dem-text-md);
+  line-height: var(--dem-leading-ui);
+}
+.dem-ask-me {
+  justify-self: end;
+  max-width: 85%;
+  color: var(--dem-on-accent);
+  background: var(--dem-accent-fill);
+}
+.dem-ask-ai {
+  justify-self: start;
+  max-width: 85%;
+  border: 1px solid color-mix(in srgb, var(--dem-ai) 25%, transparent);
+  color: var(--dem-muted);
+  background: color-mix(in srgb, var(--dem-ai) 8%, var(--dem-paper));
+}
+.dem-ask-inner {
+  outline: none;
+}

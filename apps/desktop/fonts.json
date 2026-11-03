@@ -1,0 +1,61 @@
+{
+  "//": "Fonts shipped with the app. scripts/fetch-fonts.ts downloads them into public/fonts/ and checks each SHA-256. Pin URLs to a release or commit; to update, change url, bytes and sha256 together.",
+  "files": [
+    {
+      "file": "LXGWWenKai-Regular.ttf",
+      "url": "https://github.com/lxgw/LxgwWenKai/releases/download/v1.530/LXGWWenKai-Regular.ttf",
+      "bytes": 25928940,
+      "sha256": "2d73eea94ad808999d90c0000c239a84a33b09d4bc6ab6c5b8bbf1eda8a7fc8b"
+    },
+    {
+      "file": "licenses/LXGWWenKai-OFL.txt",
+      "url": "https://raw.githubusercontent.com/lxgw/LxgwWenKai/4becfb4d5cf0c92cfdb60a6e9b504bda43315325/OFL.txt",
+      "bytes": 5171,
+      "sha256": "1a25e35da1031c6c3436fde545bb9cb5aca954e9873afe510c834b8b79bd21a0"
+    },
+    {
+      "file": "Archivo-Variable.ttf",
+      "url": "https://raw.githubusercontent.com/google/fonts/95f4904fc8bcf26d3420fe315560c96417c6dec7/ofl/archivo/Archivo%5Bwdth,wght%5D.ttf",
+      "bytes": 658596,
+      "sha256": "0e094a7d3c7c4c25cf1310c4b30014f1dae9332220b1c2c88f4fa996f0b05053"
+    },
+    {
+      "file": "licenses/Archivo-OFL.txt",
+      "url": "https://raw.githubusercontent.com/google/fonts/95f4904fc8bcf26d3420fe315560c96417c6dec7/ofl/archivo/OFL.txt",
+      "bytes": 4388,
+      "sha256": "108b4e57c9c796d3d38d0428ca7ee39de47ad93187302718d9b2d8864b9b716b"
+    },
+    {
+      "file": "JetBrainsMono-Variable.ttf",
+      "url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/cd5227bd1f61dff3bbd6c814ceaf7ffd95e947d9/fonts/variable/JetBrainsMono%5Bwght%5D.ttf",
+      "bytes": 303144,
+      "sha256": "662a196d58f1183bf2d77428b6d5283fe3f45161ab021bea4036bc98e5cac016"
+    },
+    {
+      "file": "licenses/JetBrainsMono-OFL.txt",
+      "url": "https://raw.githubusercontent.com/JetBrains/JetBrainsMono/cd5227bd1f61dff3bbd6c814ceaf7ffd95e947d9/OFL.txt",
+      "bytes": 4399,
+      "sha256": "30f0c136e3c88e422d0791acd97238870f9054a9729bc34cf2ff0d4ed8cac4ad"
+    },
+    {
+      "file": "LXGWWenKai-Medium.ttf",
+      "url": "https://github.com/lxgw/LxgwWenKai/releases/download/v1.530/LXGWWenKai-Medium.ttf",
+      "bytes": 25800076,
+      "sha256": "f4b8a34d1f838fe411540cb7c97b1c384ac9738a876c4104500bc42508b2312a",
+      "devOnly": true
+    },
+    {
+      "file": "NotoSerifTangut-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/notofonts.github.io/5c82cef0a8f08806f932062e18c02be62be278f0/fonts/NotoSerifTangut/hinted/ttf/NotoSerifTangut-Regular.ttf",
+      "bytes": 3065476,
+      "sha256": "edcc5b7727fa4d1345d2fca93305c8b90ad88d4975152d4aed79564c9117db91"
+    },
+    {
+      "file": "licenses/NotoSerifTangut-OFL.txt",
+      "url": "https://raw.githubusercontent.com/notofonts/tangut/50cf91d55a0f3ce3d9dd910eedc4f7094544f04d/OFL.txt",
+      "bytes": 4382,
+      "sha256": "bd8b32c064be2225d55f878a689063c6f169ccd9e2792d7051f0d74cf4816f1b"
+    }
+  ],
+  "//dev": "devOnly entries go to .dev-fonts/ for development builds only and never into a release (pnpm build passes --release). LXGW WenKai Medium is fetched on first use in the app (docs/05-design.md B.3, P1); the dev copy lets P0.5 judge bold text."
+}

@@ -1,0 +1,110 @@
+.dem-shell {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  grid-template-rows: var(--shell-title-h) minmax(0, 1fr) var(--shell-status-h);
+  overflow: hidden;
+  background: var(--dem-canvas);
+}
+.dem-shell-body {
+  position: relative;
+  z-index: var(--dem-z-panes);
+  display: flex;
+  gap: var(--shell-gutter);
+  min-height: 0;
+  padding: 0 var(--shell-gutter);
+}
+.dem-shell-area {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+}
+.dem-shell > .dem-statusbar {
+  position: relative;
+  z-index: var(--dem-z-chrome);
+}
+
+.dem-crumb {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  min-width: 0;
+  font-size: var(--dem-text-sm);
+  white-space: nowrap;
+}
+.dem-crumb-space {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  font-weight: 600;
+}
+.dem-crumb-space::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: var(--dem-radius-pill);
+  background: linear-gradient(135deg, var(--dem-accent), var(--dem-accent2));
+}
+.dem-crumb-item {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  color: var(--dem-on-glass-muted);
+}
+.dem-titlebar-gap {
+  flex: 1;
+  align-self: stretch;
+}
+
+/* A folded column leaves a thin edge that unfolds it. */
+.dem-fold-edge {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: var(--dem-z-chrome);
+  width: 10px;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: default;
+  outline: none;
+}
+.dem-fold-edge[data-side="left"] {
+  left: calc(-1 * var(--shell-gutter));
+}
+.dem-fold-edge[data-side="right"] {
+  right: calc(-1 * var(--shell-gutter));
+}
+.dem-fold-edge::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 3px;
+  width: 4px;
+  height: 48px;
+  margin-top: -24px;
+  border-radius: var(--dem-radius-pill);
+  background: var(--dem-on-glass-muted);
+  opacity: 0.35;
+  transition:
+    opacity var(--dem-dur-fast) var(--dem-ease-standard),
+    height var(--dem-dur-fast) var(--dem-ease-spring),
+    margin-top var(--dem-dur-fast) var(--dem-ease-spring);
+}
+.dem-fold-edge:hover::after,
+.dem-fold-edge:focus-visible::after {
+  height: 72px;
+  margin-top: -36px;
+  opacity: 0.8;
+}
+.dem-fold-edge:focus-visible::after {
+  background: var(--dem-accent-text);
+}
+
+.dem-shell-ws {
+  position: absolute;
+  inset: 0;
+}
+/* Under the home page the workspace keeps its layout but is not drawn or reachable. */
+.dem-shell-ws[data-glass-hidden] {
+  visibility: hidden;
+}

@@ -1,0 +1,92 @@
+/* 版本对比: the paper, with the old version on the left and the new on the right. */
+.dem-diff {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--dem-paper);
+  color: var(--dem-text);
+}
+.dem-diff-head {
+  display: flex;
+  flex: none;
+  align-items: center;
+  gap: var(--dem-space-3);
+  height: 44px;
+  padding: 0 var(--dem-space-3);
+  border-bottom: 1px solid var(--dem-paper-line);
+  font-size: var(--dem-text-sm);
+}
+.dem-diff-versions {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  color: var(--dem-muted);
+}
+.dem-diff-ver {
+  font-family: var(--dem-font-display);
+  font-variant-numeric: tabular-nums;
+}
+.dem-diff-ver[data-side="after"] {
+  color: var(--dem-text);
+}
+.dem-diff-count {
+  color: var(--dem-muted);
+}
+.dem-diff-gap {
+  flex: 1;
+}
+.dem-diff-body {
+  flex: 1;
+  min-height: 0;
+  overflow: auto;
+  padding: var(--dem-space-6) var(--dem-space-6) var(--dem-space-10);
+}
+
+/* Side by side: each row is one paragraph in both versions, so they stay level. */
+.dem-diff-grid.dem-prose {
+  max-width: calc(var(--dem-measure-long) * 2 + 3em);
+}
+.dem-diff-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3em;
+}
+.dem-diff-row > p {
+  margin: 0;
+  padding: 0.2em 0.6em 0.65em;
+  border-radius: var(--dem-radius-sm);
+}
+.dem-diff-row[data-kind="removed"] > p:first-child,
+.dem-diff-row[data-kind="changed"] > p:first-child {
+  background: color-mix(in srgb, var(--dem-danger) 6%, transparent);
+}
+.dem-diff-row[data-kind="added"] > p:last-child,
+.dem-diff-row[data-kind="changed"] > p:last-child {
+  background: color-mix(in srgb, var(--dem-ok) 7%, transparent);
+}
+.dem-diff-row[data-kind="same"] > p {
+  color: var(--dem-muted);
+}
+
+/* Marks: removed struck through in red, added underlined in green. Text, not only colour,
+ * tells them apart (strike vs. underline), for colour-blind readers. */
+.dem-diff-inline del,
+.dem-diff del {
+  text-decoration: line-through;
+  text-decoration-color: var(--dem-danger-text);
+  color: var(--dem-danger-text);
+  background: color-mix(in srgb, var(--dem-danger) 14%, transparent);
+  border-radius: 2px;
+}
+.dem-diff-inline ins,
+.dem-diff ins {
+  text-decoration: underline;
+  text-decoration-color: var(--dem-ok-text);
+  text-underline-offset: 0.2em;
+  color: var(--dem-ok-text);
+  background: color-mix(in srgb, var(--dem-ok) 16%, transparent);
+  border-radius: 2px;
+}
+.dem-diff-inline > p[data-kind="same"] {
+  color: var(--dem-muted);
+}

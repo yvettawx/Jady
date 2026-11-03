@@ -1,0 +1,34 @@
+/* .dem-glass sets position: relative; this one floats. */
+.dem-glass.dem-ai-button {
+  position: fixed;
+  z-index: var(--dem-z-float);
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: var(--dem-radius-pill);
+  color: var(--dem-accent-text);
+  cursor: default;
+  touch-action: none;
+  outline: none;
+  transition:
+    top var(--dem-dur-slow) var(--dem-ease-spring),
+    bottom var(--dem-dur-slow) var(--dem-ease-spring),
+    left var(--dem-dur-slow) var(--dem-ease-spring),
+    right var(--dem-dur-slow) var(--dem-ease-spring),
+    transform var(--dem-dur-fast) var(--dem-ease-spring);
+}
+.dem-ai-button:hover {
+  transform: scale(1.06);
+}
+.dem-ai-button:active {
+  transform: scale(0.94);
+}
+.dem-ai-button[data-dragging] {
+  transition: none;
+  transform: scale(1.08);
+}
+.dem-ai-button:focus-visible {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: 3px;
+}

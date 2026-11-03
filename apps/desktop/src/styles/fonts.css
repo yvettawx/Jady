@@ -1,0 +1,33 @@
+/* Fonts shipped with the app (fonts.json; downloaded into public/fonts/ at build time).
+ * Only original files are used, unmodified (OFL reserved font names; docs/05-design.md B.3).
+ * LXGW WenKai ships Regular only for now; bold is synthesised until Medium is fetched on demand (P1). */
+@font-face {
+  font-family: "LXGW WenKai";
+  src: url("/fonts/LXGWWenKai-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Archivo";
+  src: url("/fonts/Archivo-Variable.ttf") format("truetype");
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("/fonts/JetBrainsMono-Variable.ttf") format("truetype");
+  font-weight: 100 800;
+  font-style: normal;
+  font-display: swap;
+}
+/* 西夏文 (PRD A6): no system font has it. */
+@font-face {
+  font-family: "Noto Serif Tangut";
+  src: url("/fonts/NotoSerifTangut-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}

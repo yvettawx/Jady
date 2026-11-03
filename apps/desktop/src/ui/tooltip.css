@@ -1,0 +1,33 @@
+.dem-tooltip {
+  z-index: var(--dem-z-tooltip);
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  max-width: 280px;
+  padding: 3px var(--dem-space-2);
+  border-radius: var(--dem-radius-xs);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-paper);
+  background: var(--dem-text);
+  box-shadow: var(--dem-shadow-2);
+}
+.dem-tooltip[data-entering] {
+  animation: dem-fade var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-tooltip-kbd {
+  font-family: inherit;
+  opacity: 0.7;
+}
+.dem-tooltip-arrow svg {
+  display: block;
+  fill: var(--dem-text);
+}
+.dem-tooltip[data-placement="bottom"] .dem-tooltip-arrow svg {
+  transform: rotate(180deg);
+}
+.dem-tooltip[data-placement="left"] .dem-tooltip-arrow svg {
+  transform: rotate(-90deg);
+}
+.dem-tooltip[data-placement="right"] .dem-tooltip-arrow svg {
+  transform: rotate(90deg);
+}

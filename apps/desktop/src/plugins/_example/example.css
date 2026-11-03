@@ -1,0 +1,14 @@
+/* A plugin's own styles use the app's tokens, so they follow the theme and dark mode. */
+.example-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--dem-space-2);
+  padding: var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+  color: var(--dem-text);
+}
+.example-panel p {
+  margin: 0;
+  color: var(--dem-muted);
+}

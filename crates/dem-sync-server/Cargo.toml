@@ -1,0 +1,20 @@
+[package]
+name = "dem-sync-server"
+description = "A small server for syncing between one's own computers. Stores ciphertext; holds no keys."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[dependencies]
+dem-crypto.workspace = true
+dem-sync.workspace = true
+serde_json.workspace = true
+tiny_http = "0.12"
+
+[dev-dependencies]
+tempfile.workspace = true
+
+[lints]
+workspace = true

@@ -1,0 +1,77 @@
+/* Floating layers (select lists now; menus, tooltips later) are glass: blur plus rim.
+ * They float over text, which the WebGL refraction layer cannot draw, so they are nearly opaque
+ * paper rather than the shell's clear glass; otherwise the text behind shows through. */
+.dem-popover {
+  z-index: var(--dem-z-overlay);
+  box-sizing: border-box;
+  padding: var(--dem-space-1);
+  border-radius: var(--dem-radius-md);
+  background: color-mix(in srgb, var(--dem-paper) 82%, transparent);
+  -webkit-backdrop-filter: blur(var(--dem-glass-blur)) saturate(1.8);
+  backdrop-filter: blur(var(--dem-glass-blur)) saturate(1.8);
+  box-shadow:
+    inset 0 1px 0 var(--dem-glass-rim-1),
+    inset 0 0 0 1px var(--dem-glass-rim-2),
+    var(--dem-shadow-3);
+  color: var(--dem-text);
+  outline: none;
+  overflow: auto;
+}
+.dem-popover[data-entering] {
+  animation: dem-pop-in var(--dem-dur-base) var(--dem-ease-spring);
+}
+.dem-popover[data-exiting] {
+  animation: dem-pop-in var(--dem-dur-fast) var(--dem-ease-exit) reverse;
+}
+@keyframes dem-fade {
+  from {
+    opacity: 0;
+  }
+}
+@keyframes dem-pop-in {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+}
+.dem-listbox {
+  display: flex;
+  flex-direction: column;
+  outline: none;
+}
+.dem-option {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  height: var(--dem-row-h);
+  padding: 0 var(--dem-row-pad);
+  border-radius: var(--dem-radius-xs);
+  font-size: var(--dem-text-base);
+  cursor: default;
+  outline: none;
+}
+.dem-option-label {
+  flex: 1;
+}
+.dem-option-check {
+  visibility: hidden;
+}
+.dem-option[data-selected] .dem-option-check {
+  visibility: visible;
+}
+.dem-option[data-focused],
+.dem-option[data-hovered] {
+  background: var(--dem-hover);
+}
+.dem-option[data-focus-visible] {
+  outline: 2px solid var(--dem-accent-text);
+  outline-offset: -2px;
+}
+.dem-option[data-disabled] {
+  opacity: 0.45;
+}
+
+/* Where the keyboard lands when what had it went away: holds focus, shows no ring (ui/focus.ts). */
+[data-focus-home]:focus {
+  outline: none;
+}

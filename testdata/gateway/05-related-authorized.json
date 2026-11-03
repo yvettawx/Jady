@@ -1,0 +1,10 @@
+{
+  "name": "related in an authorized session",
+  "authorized": true,
+  "steps": [
+    { "call": { "tool": "related", "args": { "id": "n-001" } },
+      "expect": { "ok": true, "ids": ["n-001", "n-002", "s-001"], "protected_links": 2 } },
+    { "call": { "tool": "related", "args": { "id": "s-001" } },
+      "expect": { "ok": true, "ids": ["n-001", "n-003", "s-001"], "protected_links": 0 } }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "id": "word-count",
+  "name": { "zh-CN": "字数统计", "en": "Word count" },
+  "version": "1.0.0",
+  "apiVersion": 1,
+  "description": {
+    "zh-CN": "最近改过的条目各有多少字，也能把今天的总数记成一条笔记。",
+    "en": "How long the items you changed lately are, and a note of today's total."
+  },
+  "permissions": ["items:read", "items:create"],
+  "panels": [{ "id": "main", "title": { "zh-CN": "字数统计", "en": "Word count" } }],
+  "commands": [
+    { "id": "open", "title": { "zh-CN": "字数统计", "en": "Word count" }, "panel": "main" },
+    { "id": "log", "title": { "zh-CN": "记下最近的总字数", "en": "Note the recent word count" } }
+  ]
+}

@@ -1,0 +1,1699 @@
+{
+  "blob/149a8201c4662a7fe3ce52a2deb9d7da133b3b415b74fb9cc61e35dbbbc54569": {
+    "len": 26,
+    "utf8": "attachment two, plain text"
+  },
+  "blob/c88a42515418412a7e54ea816d5835cc9a964c92ad59cdf112b48ca104b06cd9": {
+    "len": 24,
+    "utf8": "附件一：纯文本。"
+  },
+  "item/016f5e67-993f-7a45-a223-78a46d6d9c1e": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {},
+      "meta": {
+        "container": null,
+        "created": 1577836845375,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "复习",
+        "type": "domain",
+        "updated": 1577836845375
+      }
+    },
+    "history": [
+      "system"
+    ]
+  },
+  "item/016f5e68-29b0-79bc-8e39-398ddf99c35a": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {},
+      "meta": {
+        "container": null,
+        "created": 1577836882352,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "動詞 设定 事务",
+        "type": "domain",
+        "updated": 1577836882352
+      }
+    },
+    "history": [
+      "system"
+    ]
+  },
+  "item/016f5e68-6adb-79fb-a5ad-8fd1691d57b0": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {},
+      "meta": {
+        "container": null,
+        "created": 1577836899035,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "kernel",
+        "type": "domain",
+        "updated": 1577836899035
+      }
+    },
+    "history": [
+      "system"
+    ]
+  },
+  "item/016f5e68-9662-7146-8b45-76401c2e1b6c": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {},
+      "meta": {
+        "container": null,
+        "created": 1577836910178,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "西夏 plan naïve",
+        "type": "project",
+        "updated": 1577836910178
+      }
+    },
+    "history": [
+      "system"
+    ]
+  },
+  "item/016f5e68-9df8-7441-b529-0876fe204fd2": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {},
+      "meta": {
+        "container": null,
+        "created": 1577836912120,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "Überblick reading Überblick",
+        "type": "project",
+        "updated": 1577836912120
+      }
+    },
+    "history": [
+      "system"
+    ]
+  },
+  "item/016f5e69-58de-7080-9f3f-8c4b08faf376": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "面试前一天要把简历再检查一遍。干净的代码比聪明的代码更重要。我们今天复习了数据库的事务隔离级别。我们今天复习了数据库的事务隔离级别。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "关系代数是查询优化的基础。干净的代码比聪明的代码更重要。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "面试前一天要把简历再检查一遍。我们讨论了内存管理和虚拟地址。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "我后来加的一段。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "AI 建议补充的一段。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {},
+      "meta": {
+        "container": "016f5e67-993f-7a45-a223-78a46d6d9c1e",
+        "created": 1577836959966,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "history": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":-2679,\"month\":4,\"day\":13,\"approximate\":true}}",
+        "title": "笔记 Überblick",
+        "type": "event",
+        "updated": 1577836959966
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027",
+      "me",
+      "ai:0192f3c4-0000-7000-8000-000000000001"
+    ]
+  },
+  "item/016f5e69-cb7a-7385-8952-bfe6460d4b50": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "头发长了，后天去理发。西夏文是一种已经消亡的文字。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "西夏文是一种已经消亡的文字。西夏文是一种已经消亡的文字。干净的代码比聪明的代码更重要。西夏文是一种已经消亡的文字。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "Ça dépend de la météo de demain. Ça dépend de la météo de demain. Le café était déjà froid quand elle est arrivée."
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "我们讨论了内存管理和虚拟地址。关系代数是查询优化的基础。关系代数是查询优化的基础。他在历史小说里设定了一个架空的王朝。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "The archive contains letters from the eighteenth century. Write the failing test first, then the fix. Transactions guarantee atomicity and isolation."
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-77fe-7342-a912-b4222c7356af": {
+          "kind": "reference",
+          "to": "016f5e69-58de-7080-9f3f-8c4b08faf376"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-6adb-79fb-a5ad-8fd1691d57b0",
+        "created": 1577836989306,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":-953,\"month\":12,\"day\":1,\"until\":{\"year\":-761,\"month\":null,\"day\":null}}}",
+        "title": "事务",
+        "type": "person",
+        "updated": 1577836989306
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e69-f00d-7b23-9103-d78d6c8c09f6": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "𗘙𘏍𘁗𗥑𘍿𗆓 𘙫𗚺𗚒𘃮𗅄𗢅 𘌛𗯀𘍣𗞸𗸕𗙞 𗚩𗾷𗒕𗍱𘊿𘆬 𘖠"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "Spaced repetition beats cramming for long-term recall. Spaced repetition beats cramming for long-term recall."
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {
+        "company": "Nordlicht Labs",
+        "salary": 3080,
+        "status": "rejected"
+      },
+      "labels": [],
+      "links": {
+        "01a14d53-78bc-73a6-827e-44b2ece5288a": {
+          "kind": "reference",
+          "to": "016f5e69-cb7a-7385-8952-bfe6460d4b50"
+        }
+      },
+      "meta": {
+        "container": "016f5e67-993f-7a45-a223-78a46d6d9c1e",
+        "created": 1577836998669,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "设定 Überblick 王朝",
+        "type": "job_posting",
+        "updated": 1577836998669
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6a-63d7-7d08-9f8a-69ed58d28cbe": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "我们今天复习了数据库的事务隔离级别。我们讨论了内存管理和虚拟地址。干净的代码比聪明的代码更重要。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "这本书的后记写得很好。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-79a0-7120-83b6-d4a163c7c9b5": {
+          "kind": "reference",
+          "to": "016f5e69-cb7a-7385-8952-bfe6460d4b50"
+        },
+        "01a14d53-79a0-7120-83b6-d4a2ca88fc54": {
+          "kind": "reference",
+          "to": "016f5e69-58de-7080-9f3f-8c4b08faf376"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-6adb-79fb-a5ad-8fd1691d57b0",
+        "created": 1577837028311,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "job": true,
+          "法语": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":1834,\"month\":9,\"day\":null}}",
+        "title": "變位",
+        "type": "person",
+        "updated": 1577837028311
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6a-8390-7597-a447-2a4e4c6d4a6d": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "头发长了，后天去理发。西夏文是一种已经消亡的文字。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-7a7a-7083-a6dc-f6afd74e742b": {
+          "kind": "reference",
+          "to": "016f5e6a-63d7-7d08-9f8a-69ed58d28cbe"
+        },
+        "01a14d53-7a7a-7083-a6dc-f6b003569fa4": {
+          "kind": "reference",
+          "to": "016f5e69-f00d-7b23-9103-d78d6c8c09f6"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+        "created": 1577837036432,
+        "privacy": "normal",
+        "source": "{\"origin\":\"ai_search\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[\"https://example.org/99745\"]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "Überblick",
+        "type": "article",
+        "updated": 1577837036432
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6b-63bd-775c-bb22-d17f2b1dc544": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "學習法語的時候要注意動詞變位。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "这个操作系统的调度器需要重新设计。西夏文是一种已经消亡的文字。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "干净的代码比聪明的代码更重要。我们讨论了内存管理和虚拟地址。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "关系代数是查询优化的基础。面试前一天要把简历再检查一遍。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "學習法語的時候要注意動詞變位。這本書的後記寫得很好。他在歷史小說裡設定了一個架空的王朝。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {
+        "gtd": "done",
+        "important": false,
+        "urgent": true
+      },
+      "labels": [],
+      "links": {
+        "01a14d53-7b3a-7434-af27-6dae8b901edf": {
+          "kind": "reference",
+          "to": "016f5e69-f00d-7b23-9103-d78d6c8c09f6"
+        },
+        "01a14d53-7b3a-7434-af27-6daf4d1ce2a5": {
+          "kind": "reference",
+          "to": "016f5e6a-63d7-7d08-9f8a-69ed58d28cbe"
+        }
+      },
+      "meta": {
+        "container": "016f5e67-993f-7a45-a223-78a46d6d9c1e",
+        "created": 1577837093821,
+        "privacy": "confidential",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "inbox",
+        "tags": {
+          "数据库": true,
+          "法语": true
+        },
+        "time": "{\"kind\":\"due\",\"at\":\"2020-01-04T00:04:53.821Z\"}",
+        "title": "面试 naïve plan",
+        "type": "todo",
+        "updated": 1577837093821
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6b-8f78-7436-9a1c-791dd63c74ae": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "Transactions guarantee atomicity and isolation. Spaced repetition beats cramming for long-term recall."
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "我们今天复习了数据库的事务隔离级别。这个操作系统的调度器需要重新设计。我们讨论了内存管理和虚拟地址。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "The scheduler picks the next runnable thread. The archive contains letters from the eighteenth century."
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "西夏文是一种已经消亡的文字。关系代数是查询优化的基础。我们今天复习了数据库的事务隔离级别。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "Nous avons révisé les verbes irréguliers à l'école. La fenêtre donne sur un jardin très agréable. Il préfère étudier le soir, après le dîner."
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-7c31-7184-b9e0-a3dedb4eddc6": {
+          "kind": "reference",
+          "to": "016f5e6a-8390-7597-a447-2a4e4c6d4a6d"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9df8-7441-b529-0876fe204fd2",
+        "created": 1577837105016,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": null,
+        "title": "调度 動詞 reading",
+        "type": "note",
+        "updated": 1577837105016
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6b-cb26-7ed6-b4b1-3c94781c302b": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "乾淨的程式碼比聰明的程式碼更重要。頭髮長了，後天去理髮。這本書的後記寫得很好。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {
+        "front": "设定",
+        "review": true
+      },
+      "labels": [],
+      "links": {
+        "01a14d53-7cde-77f8-8d56-0e0826917d24": {
+          "kind": "reference",
+          "to": "016f5e69-58de-7080-9f3f-8c4b08faf376"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9df8-7441-b529-0876fe204fd2",
+        "created": 1577837120294,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "reading": true,
+          "writing": true
+        },
+        "time": null,
+        "title": "reading 西夏",
+        "type": "card",
+        "updated": 1577837120294
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6b-d83f-75f0-a44f-6bf974e21916": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "The archive contains letters from the eighteenth century. Write the failing test first, then the fix."
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "他在歷史小說裡設定了一個架空的王朝。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {
+        "gtd": "someday",
+        "important": false,
+        "urgent": false
+      },
+      "labels": [],
+      "links": {
+        "01a14d53-7da8-74b6-bc44-51b0b5140011": {
+          "kind": "reference",
+          "to": "016f5e6b-8f78-7436-9a1c-791dd63c74ae"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9df8-7441-b529-0876fe204fd2",
+        "created": 1577837123647,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "history": true
+        },
+        "time": "{\"kind\":\"due\",\"at\":\"2020-01-05T00:05:23.647Z\"}",
+        "title": "naïve reading 西夏",
+        "type": "todo",
+        "updated": 1577837123647
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6c-b3cf-7aa2-8781-f7757eca267d": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "Spaced repetition beats cramming for long-term recall. Transactions guarantee atomicity and isolation. The archive contains letters from the eighteenth century."
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "乾淨的程式碼比聰明的程式碼更重要。這個作業系統的調度器需要重新設計。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "Spaced repetition beats cramming for long-term recall. Transactions guarantee atomicity and isolation. The archive contains letters from the eighteenth century."
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "頭髮長了，後天去理髮。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "面试前一天要把简历再检查一遍。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-7e88-71e3-bfdd-e422cee2bbec": {
+          "kind": "reference",
+          "to": "016f5e6a-8390-7597-a447-2a4e4c6d4a6d"
+        },
+        "01a14d53-7e88-71e3-bfdd-e423fa9b0aed": {
+          "kind": "reference",
+          "to": "016f5e6b-cb26-7ed6-b4b1-3c94781c302b"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+        "created": 1577837179855,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "小说设定": true,
+          "算法": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":247,\"month\":8,\"day\":14}}",
+        "title": "面试 café",
+        "type": "person",
+        "updated": 1577837179855
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6c-ed47-753d-a5fe-1e38c416f32b": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "Transactions guarantee atomicity and isolation."
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-7f31-75f5-b154-5f781e9724e4": {
+          "kind": "reference",
+          "to": "016f5e6b-cb26-7ed6-b4b1-3c94781c302b"
+        },
+        "01a14d53-7f32-7656-93a5-a263d454cb82": {
+          "kind": "reference",
+          "to": "016f5e69-f00d-7b23-9103-d78d6c8c09f6"
+        }
+      },
+      "meta": {
+        "container": "016f5e67-993f-7a45-a223-78a46d6d9c1e",
+        "created": 1577837194567,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "trashed",
+        "tags": {
+          "database": true,
+          "writing": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":-631,\"month\":2,\"day\":8}}",
+        "title": "事务 王朝",
+        "type": "person",
+        "updated": 1577837194567
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6d-6a20-740c-9ac1-8b7b93affccd": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "面試前一天要把簡歷再檢查一遍。我們今天複習了資料庫的事務隔離級別。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {
+        "gtd": "done",
+        "important": true,
+        "urgent": true
+      },
+      "labels": [],
+      "links": {
+        "01a14d53-7fec-7239-b4c0-d3ca97006413": {
+          "kind": "reference",
+          "to": "016f5e6b-8f78-7436-9a1c-791dd63c74ae"
+        },
+        "01a14d53-7fec-7239-b4c0-d3cb2edf4456": {
+          "kind": "reference",
+          "to": "016f5e6b-cb26-7ed6-b4b1-3c94781c302b"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-6adb-79fb-a5ad-8fd1691d57b0",
+        "created": 1577837226528,
+        "privacy": "sensitive",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": "{\"kind\":\"due\",\"at\":\"2019-12-12T00:07:06.528Z\"}",
+        "title": "café été",
+        "type": "todo",
+        "updated": 1577837226528
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6d-cfd7-77c8-a161-a2e2704165f2": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "Spaced repetition beats cramming for long-term recall. Spaced repetition beats cramming for long-term recall."
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-809b-7209-b602-50e7182d8602": {
+          "kind": "reference",
+          "to": "016f5e6b-8f78-7436-9a1c-791dd63c74ae"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-6adb-79fb-a5ad-8fd1691d57b0",
+        "created": 1577837252567,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "job": true,
+          "法语": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":1061,\"month\":9,\"day\":null}}",
+        "title": "動詞",
+        "type": "person",
+        "updated": 1577837252567
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6e-4b4f-7099-8995-b430e74c94ff": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "Il préfère étudier le soir, après le dîner. La fenêtre donne sur un jardin très agréable. Où est la bibliothèque la plus proche ?"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "这个操作系统的调度器需要重新设计。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "我们讨论了内存管理和虚拟地址。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "我们讨论了内存管理和虚拟地址。我们今天复习了数据库的事务隔离级别。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "關係代數是查詢優化的基礎。這本書的後記寫得很好。頭髮長了，後天去理髮。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-8144-7629-958b-538731d8b329": {
+          "kind": "reference",
+          "to": "016f5e6d-6a20-740c-9ac1-8b7b93affccd"
+        },
+        "01a14d53-8144-7629-958b-53883d0b4f05": {
+          "kind": "reference",
+          "to": "016f5e69-58de-7080-9f3f-8c4b08faf376"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+        "created": 1577837284175,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {},
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":-2520,\"month\":12,\"day\":17}}",
+        "title": "王朝 été",
+        "type": "person",
+        "updated": 1577837284175
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6e-bc8f-7de1-8a26-5a60f0ade3f9": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "关系代数是查询优化的基础。面试前一天要把简历再检查一遍。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "关系代数是查询优化的基础。关系代数是查询优化的基础。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "𗡅𗹷𗘂𘚛𗫣𘃌 𘚃𗬧𗃁𗱉𘞲𗂴 𗜠𘈾𘕔𗪭𗷑𘘫 𗓱𗸇𘄵𗑟𗂦𗏘 𗽇𗬝𗚐"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "西夏文是一种已经消亡的文字。我们今天复习了数据库的事务隔离级别。这本书的后记写得很好。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-81f5-7433-9036-74c79ede3e3f": {
+          "kind": "reference",
+          "to": "016f5e69-f00d-7b23-9103-d78d6c8c09f6"
+        }
+      },
+      "meta": {
+        "container": null,
+        "created": 1577837313167,
+        "privacy": "private",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "french": true,
+          "rust": true
+        },
+        "time": null,
+        "title": "王朝",
+        "type": "idea",
+        "updated": 1577837313167
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6f-98c9-7e44-99e2-bc801b037b5f": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "关系代数是查询优化的基础。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "這本書的後記寫得很好。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-829f-7206-97d1-83f30e8729dc": {
+          "kind": "reference",
+          "to": "016f5e6c-b3cf-7aa2-8781-f7757eca267d"
+        },
+        "01a14d53-829f-7206-97d1-83f48de4d202": {
+          "kind": "reference",
+          "to": "016f5e69-f00d-7b23-9103-d78d6c8c09f6"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-29b0-79bc-8e39-398ddf99c35a",
+        "created": 1577837369545,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "archived",
+        "tags": {
+          "reading": true,
+          "writing": true,
+          "数据库": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":1069,\"month\":null,\"day\":null,\"approximate\":true,\"until\":{\"year\":1092,\"month\":null,\"day\":null}}}",
+        "title": "事务 调度",
+        "type": "journal",
+        "updated": 1577837369545
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e6f-ee0b-7798-b6ee-e28dbd60f327": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "我們今天複習了資料庫的事務隔離級別。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-835f-70c9-bbbe-0ec12cd75953": {
+          "kind": "reference",
+          "to": "016f5e6d-cfd7-77c8-a161-a2e2704165f2"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-29b0-79bc-8e39-398ddf99c35a",
+        "created": 1577837391371,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "reading": true,
+          "小说设定": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":868,\"month\":null,\"day\":null}}",
+        "title": "kernel",
+        "type": "event",
+        "updated": 1577837391371
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e70-0099-7f1a-8607-89d1eb5b5911": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "𗤎𘖋𗚚𗫥𗕦𘄑 𗀅𗒟𗆯𗚖𗔝𗢶 𗤽𘘠𗿟𗬢𗌺𗜌 𗬄𘑙𗾷𗃒𗗴𘔠 𗈁𗇲𗖯𘐒𗤏𗮝 𗶷𗏜𗁟𗚶𗥣"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "The scheduler picks the next runnable thread. The archive contains letters from the eighteenth century."
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "西夏文是一种已经消亡的文字。这个操作系统的调度器需要重新设计。西夏文是一种已经消亡的文字。我们今天复习了数据库的事务隔离级别。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "面试前一天要把简历再检查一遍。干净的代码比聪明的代码更重要。我们讨论了内存管理和虚拟地址。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "关系代数是查询优化的基础。面试前一天要把简历再检查一遍。关系代数是查询优化的基础。关系代数是查询优化的基础。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-841d-7375-af44-d44a72d6bb92": {
+          "kind": "reference",
+          "to": "016f5e6f-ee0b-7798-b6ee-e28dbd60f327"
+        },
+        "01a14d53-841e-7499-859b-0a3ea96de94e": {
+          "kind": "reference",
+          "to": "016f5e6a-8390-7597-a447-2a4e4c6d4a6d"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+        "created": 1577837396121,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "法语": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":1465,\"month\":10,\"day\":null,\"until\":{\"year\":1546,\"month\":null,\"day\":null}}}",
+        "title": "调度",
+        "type": "event",
+        "updated": 1577837396121
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e70-544b-762f-ae31-b5274e16d623": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "𗰰𘓭𗫨𗂠𗔤𗃷 𗼠𗮌𘗀𗬕𗊪"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "他在歷史小說裡設定了一個架空的王朝。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "他在歷史小說裡設定了一個架空的王朝。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "乾淨的程式碼比聰明的程式碼更重要。"
+            ],
+            "nodeName": "paragraph"
+          },
+          {
+            "attributes": {},
+            "children": [
+              "面試前一天要把簡歷再檢查一遍。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {
+        "company": "Nordlicht Labs",
+        "salary": 1975,
+        "status": "offer"
+      },
+      "labels": [],
+      "links": {
+        "01a14d53-84a7-766f-a049-68856f8efed7": {
+          "kind": "reference",
+          "to": "016f5e6e-bc8f-7de1-8a26-5a60f0ade3f9"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+        "created": 1577837417547,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "active",
+        "tags": {
+          "reading": true
+        },
+        "time": null,
+        "title": "Überblick café 面试",
+        "type": "job_posting",
+        "updated": 1577837417547
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "item/016f5e70-dd15-7804-94df-000e6d1a5fdb": {
+    "doc": {
+      "body": {
+        "attributes": {},
+        "children": [
+          {
+            "attributes": {},
+            "children": [
+              "學習法語的時候要注意動詞變位。"
+            ],
+            "nodeName": "paragraph"
+          }
+        ],
+        "nodeName": "doc"
+      },
+      "dem": {
+        "schema": 1
+      },
+      "fields": {},
+      "labels": [],
+      "links": {
+        "01a14d53-854d-75ab-983d-55b56628fd61": {
+          "kind": "reference",
+          "to": "016f5e6e-4b4f-7099-8995-b430e74c94ff"
+        },
+        "01a14d53-854d-75ab-983d-55b69630a590": {
+          "kind": "reference",
+          "to": "016f5e6a-63d7-7d08-9f8a-69ed58d28cbe"
+        }
+      },
+      "meta": {
+        "container": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+        "created": 1577837452565,
+        "privacy": "normal",
+        "source": "{\"origin\":\"me\",\"needs_check\":false,\"recheck_on\":null,\"refs\":[]}",
+        "state": "trashed",
+        "tags": {
+          "database": true,
+          "writing": true
+        },
+        "time": "{\"kind\":\"occurred\",\"date\":{\"year\":642,\"month\":7,\"day\":2,\"approximate\":true}}",
+        "title": "面试 變位",
+        "type": "journal",
+        "updated": 1577837452565
+      }
+    },
+    "history": [
+      "system",
+      "import:gen-2027"
+    ]
+  },
+  "log/activity": {
+    "damaged": 0,
+    "records": [
+      {
+        "action": "import",
+        "item": "016f5e67-993f-7a45-a223-78a46d6d9c1e",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:00:45.375Z",
+        "type": "domain",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e68-29b0-79bc-8e39-398ddf99c35a",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:01:22.352Z",
+        "type": "domain",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e68-6adb-79fb-a5ad-8fd1691d57b0",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:01:39.035Z",
+        "type": "domain",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:01:50.178Z",
+        "type": "project",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e68-9df8-7441-b529-0876fe204fd2",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:01:52.12Z",
+        "type": "project",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e69-58de-7080-9f3f-8c4b08faf376",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:02:39.966Z",
+        "type": "event",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e69-cb7a-7385-8952-bfe6460d4b50",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:03:09.306Z",
+        "type": "person",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e69-f00d-7b23-9103-d78d6c8c09f6",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:03:18.669Z",
+        "type": "job_posting",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6a-63d7-7d08-9f8a-69ed58d28cbe",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:03:48.311Z",
+        "type": "person",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6a-8390-7597-a447-2a4e4c6d4a6d",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:03:56.432Z",
+        "type": "article",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6b-63bd-775c-bb22-d17f2b1dc544",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:04:53.821Z",
+        "type": "todo",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6b-8f78-7436-9a1c-791dd63c74ae",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:05:05.016Z",
+        "type": "note",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6b-cb26-7ed6-b4b1-3c94781c302b",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:05:20.294Z",
+        "type": "card",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6b-d83f-75f0-a44f-6bf974e21916",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:05:23.647Z",
+        "type": "todo",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6c-b3cf-7aa2-8781-f7757eca267d",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:06:19.855Z",
+        "type": "person",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6c-ed47-753d-a5fe-1e38c416f32b",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:06:34.567Z",
+        "type": "person",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6d-6a20-740c-9ac1-8b7b93affccd",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:07:06.528Z",
+        "type": "todo",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6d-cfd7-77c8-a161-a2e2704165f2",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:07:32.567Z",
+        "type": "person",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6e-4b4f-7099-8995-b430e74c94ff",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:08:04.175Z",
+        "type": "person",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6e-bc8f-7de1-8a26-5a60f0ade3f9",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:08:33.167Z",
+        "type": "idea",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6f-98c9-7e44-99e2-bc801b037b5f",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:09:29.545Z",
+        "type": "journal",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e6f-ee0b-7798-b6ee-e28dbd60f327",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:09:51.371Z",
+        "type": "event",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e70-0099-7f1a-8607-89d1eb5b5911",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:09:56.121Z",
+        "type": "event",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e70-544b-762f-ae31-b5274e16d623",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:10:17.547Z",
+        "type": "job_posting",
+        "v": 1
+      },
+      {
+        "action": "import",
+        "item": "016f5e70-dd15-7804-94df-000e6d1a5fdb",
+        "kind": "activity",
+        "origin": "import",
+        "ts": "2020-01-01T00:10:52.565Z",
+        "type": "journal",
+        "v": 1
+      }
+    ]
+  },
+  "manifest": {
+    "created": "2026-10-18T04:44:36.908753Z",
+    "current_file_key_id": 1,
+    "file_key_ids": [
+      1
+    ],
+    "format": "dem-library",
+    "format_version": 1,
+    "kdf": {
+      "alg": "argon2id",
+      "m_kib": 64,
+      "p": 1,
+      "salt": "OWAixuouXrvS96MJE3TMOw==",
+      "t": 1,
+      "version": 19
+    },
+    "library_id": "01a14d53-72ac-754b-8056-0024994a6f61",
+    "wrapped_keys": [
+      {
+        "ciphertext": "PdqlOPjQjOMQ3QNi7NTYmO7DeO5K+CmXjPm7RerOMxtzrP+0Zd1RhI4LYeIJmca4",
+        "kind": "password",
+        "nonce": "OTiksnuhzYPwJXTguw2T3TBuErUQbAal"
+      },
+      {
+        "ciphertext": "aGJbM2y3WsmyN/11KPlRfLX8TyW7H32p9yGiTuAqd2UTJrju6D6UYMT8DoJEZQJv",
+        "kind": "recovery",
+        "nonce": "ybYuEyDB9cHh8Ny0JXR8CC+h+QMgrsXe"
+      }
+    ]
+  },
+  "structure": [
+    {
+      "item": "016f5e67-993f-7a45-a223-78a46d6d9c1e",
+      "kind": "domain",
+      "parent": null
+    },
+    {
+      "item": "016f5e68-29b0-79bc-8e39-398ddf99c35a",
+      "kind": "domain",
+      "parent": null
+    },
+    {
+      "item": "016f5e68-6adb-79fb-a5ad-8fd1691d57b0",
+      "kind": "domain",
+      "parent": null
+    },
+    {
+      "item": "016f5e68-9662-7146-8b45-76401c2e1b6c",
+      "kind": "project",
+      "parent": "016f5e68-29b0-79bc-8e39-398ddf99c35a"
+    },
+    {
+      "item": "016f5e68-9df8-7441-b529-0876fe204fd2",
+      "kind": "project",
+      "parent": "016f5e67-993f-7a45-a223-78a46d6d9c1e"
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+[package]
+name = "dem-browser"
+description = "The dedicated browser AI may drive: the user's own Chrome with a separate profile, through the DevTools protocol over a pipe (D11, D15)."
+version.workspace = true
+edition.workspace = true
+rust-version.workspace = true
+license.workspace = true
+publish.workspace = true
+
+[lints]
+workspace = true
+
+[dependencies]
+serde_json.workspace = true
+thiserror.workspace = true
+
+[dev-dependencies]
+tiny_http = "0.12"

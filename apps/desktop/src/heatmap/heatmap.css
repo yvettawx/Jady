@@ -1,0 +1,187 @@
+.dem-heat {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: var(--dem-space-2);
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  color: var(--dem-on-glass);
+  outline: none;
+  border-radius: var(--dem-radius-md);
+}
+.dem-heat:focus-visible {
+  outline: 2px solid var(--dem-accent);
+  outline-offset: 2px;
+}
+/* In a workspace cell. */
+.dem-heat-page {
+  height: 100%;
+  box-sizing: border-box;
+  padding: var(--dem-space-4);
+}
+.dem-heat-stage {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  min-height: 0;
+  overflow: hidden;
+}
+.dem-heat-canvas {
+  position: absolute;
+  inset: 0;
+  display: block;
+  touch-action: none;
+  cursor: pointer;
+}
+/* 底部：连续天数和图例 */
+.dem-heat-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--dem-space-1) var(--dem-space-3);
+  font-size: var(--dem-text-xs);
+  color: var(--dem-on-glass-muted);
+}
+.dem-heat-streak {
+  color: var(--dem-on-glass);
+}
+.dem-heat-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dem-space-1);
+  margin-left: auto;
+}
+.dem-heat-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 1px var(--dem-space-1);
+  border: 0;
+  border-radius: var(--dem-radius-sm);
+  background: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+}
+.dem-heat-chip:hover {
+  background: var(--dem-hover);
+}
+.dem-heat-chip i,
+.dem-heat-counts i,
+.dem-heat-card li button i {
+  flex: none;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+.dem-heat-chip[aria-pressed="false"] {
+  opacity: 0.45;
+  text-decoration: line-through;
+}
+
+/* 给读屏软件的一句话 */
+.dem-heat-live {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* 悬停 */
+.dem-heat-tip {
+  position: fixed;
+  z-index: var(--dem-z-peek);
+  min-width: 120px;
+  padding: var(--dem-space-2);
+  border-radius: var(--dem-radius-sm);
+  background: var(--dem-paper);
+  box-shadow: var(--dem-shadow-2);
+  color: var(--dem-text);
+  font-size: var(--dem-text-xs);
+  pointer-events: none;
+}
+.dem-heat-tip-date {
+  margin-bottom: var(--dem-space-1);
+  font-weight: 600;
+}
+.dem-heat-counts {
+  display: grid;
+  gap: 2px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dem-heat-counts li {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-1);
+}
+.dem-heat-counts b {
+  margin-left: auto;
+  padding-left: var(--dem-space-3);
+  font-variant-numeric: tabular-nums;
+  font-weight: 500;
+}
+.dem-heat-none {
+  margin: 0;
+  color: var(--dem-muted);
+}
+
+/* 点一天的卡片 */
+.dem-heat-anchor {
+  position: fixed;
+  width: 0;
+  height: 0;
+}
+.dem-heat-card {
+  width: 260px;
+  padding: var(--dem-space-3);
+  font-size: var(--dem-text-sm);
+}
+.dem-heat-card [role="dialog"] {
+  outline: none;
+}
+.dem-heat-card h3 {
+  margin: 0 0 var(--dem-space-2);
+  font-size: var(--dem-text-md);
+}
+.dem-heat-card h4 {
+  margin: var(--dem-space-3) 0 var(--dem-space-1);
+  font-size: var(--dem-text-xs);
+  font-weight: 500;
+  color: var(--dem-muted);
+}
+.dem-heat-card ul:not(.dem-heat-counts) {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.dem-heat-card li button {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+  width: 100%;
+  padding: 3px var(--dem-space-1);
+  border: 0;
+  border-radius: var(--dem-radius-sm);
+  background: none;
+  color: inherit;
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+.dem-heat-card li button:hover,
+.dem-heat-card li button:focus-visible {
+  background: var(--dem-hover);
+  outline: none;
+}
+.dem-heat-card li button span {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

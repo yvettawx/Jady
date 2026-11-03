@@ -1,0 +1,53 @@
+# cargo-deny configuration: license allow-list and security advisories.
+
+[graph]
+all-features = true
+# Only the shipping platforms. Linux (GTK stack) is added when Linux support starts.
+targets = [
+  "aarch64-apple-darwin",
+  "x86_64-apple-darwin",
+  "x86_64-pc-windows-msvc",
+  "aarch64-pc-windows-msvc",
+]
+
+[advisories]
+version = 2
+yanked = "deny"
+# Vulnerabilities always fail. "Unmaintained" notices fail only for our direct
+# dependencies; transitive ones (e.g. the proc-macro helper `paste`) are reviewed
+# when the parent crate is upgraded.
+unmaintained = "workspace"
+
+[licenses]
+version = 2
+confidence-threshold = 0.9
+allow = [
+  "MIT",
+  "MIT-0",
+  "Apache-2.0",
+  "Apache-2.0 WITH LLVM-exception",
+  "BSD-2-Clause",
+  "BSD-3-Clause",
+  "ISC",
+  "Zlib",
+  "0BSD",
+  "Unicode-3.0",
+  "Unicode-DFS-2016",
+  "CC0-1.0",
+  "BSL-1.0",
+  "MPL-2.0",
+  "CDLA-Permissive-2.0",
+]
+
+# Workspace crates are not published; their own licence is AGPL-3.0-only (LICENSE).
+[licenses.private]
+ignore = true
+
+[bans]
+multiple-versions = "allow"
+wildcards = "deny"
+allow-wildcard-paths = true
+
+[sources]
+unknown-registry = "deny"
+unknown-git = "deny"

@@ -1,0 +1,180 @@
+.dem-review {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background: var(--dem-paper);
+  color: var(--dem-text);
+  outline: none;
+}
+.dem-review-progress {
+  flex: none;
+  height: 2px;
+  background: var(--dem-paper-line);
+}
+.dem-review-progress i {
+  display: block;
+  height: 100%;
+  background: var(--dem-accent);
+  transition: width var(--dem-dur-base) var(--dem-ease-standard);
+}
+.dem-review-page {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  gap: var(--dem-space-4);
+  width: 100%;
+  max-width: 560px;
+  min-height: 0;
+  margin: 0 auto;
+  padding: var(--dem-space-5);
+  box-sizing: border-box;
+  overflow: auto;
+}
+.dem-review-count {
+  margin: 0;
+  font-size: var(--dem-text-sm);
+  font-variant-numeric: tabular-nums;
+  color: var(--dem-muted);
+}
+.dem-review-front {
+  margin: 0;
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-xl);
+  line-height: var(--dem-leading-long);
+}
+.dem-review-back {
+  margin: 0;
+  padding-top: var(--dem-space-3);
+  border-top: 1px solid var(--dem-paper-line);
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-lg);
+  line-height: var(--dem-leading-long);
+  animation: dem-review-in var(--dem-dur-base) var(--dem-ease-spring);
+}
+@keyframes dem-review-in {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+}
+.dem-review-mine {
+  margin: 0;
+  font-size: var(--dem-text-md);
+  color: var(--dem-muted);
+}
+.dem-review-example {
+  margin: 0;
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-md);
+  color: var(--dem-muted);
+}
+.dem-review-peeked {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dem-space-1);
+  margin: 0;
+  font-size: var(--dem-text-sm);
+  color: var(--dem-warn-text);
+}
+.dem-review-key {
+  margin-left: var(--dem-space-2);
+  font: inherit;
+  font-size: var(--dem-text-xs);
+  opacity: 0.55;
+}
+.dem-review-sure-pick {
+  display: flex;
+  gap: var(--dem-space-2);
+}
+.dem-review-pick,
+.dem-review-rate {
+  flex: 1;
+  padding: var(--dem-space-2);
+  border: 1px solid var(--dem-paper-line);
+  border-radius: var(--dem-radius-md);
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-size: var(--dem-text-sm);
+  cursor: pointer;
+  transition: background var(--dem-dur-fast) var(--dem-ease-standard);
+}
+.dem-review-pick:hover,
+.dem-review-rate:hover {
+  background: var(--dem-hover);
+}
+.dem-review-pick:focus-visible,
+.dem-review-rate:focus-visible {
+  outline: 2px solid var(--dem-accent);
+  outline-offset: 1px;
+}
+.dem-review-pick[aria-pressed="true"] {
+  border-color: var(--dem-accent);
+  background: color-mix(in srgb, var(--dem-accent) 12%, transparent);
+}
+.dem-review-answer {
+  width: 100%;
+  padding: var(--dem-space-2);
+  border: 1px solid var(--dem-paper-line);
+  border-radius: var(--dem-radius-md);
+  box-sizing: border-box;
+  background: none;
+  color: inherit;
+  font: inherit;
+  font-family: var(--dem-font-long);
+  font-size: var(--dem-text-md);
+  resize: none;
+  outline: none;
+}
+.dem-review-answer:focus {
+  border-color: var(--dem-accent);
+}
+.dem-review-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--dem-space-2);
+}
+.dem-review-gap {
+  flex: 1;
+}
+.dem-review-rates {
+  display: flex;
+  gap: var(--dem-space-2);
+}
+.dem-review-rate {
+  display: grid;
+  gap: 2px;
+  justify-items: center;
+}
+.dem-review-rate small {
+  font-size: var(--dem-text-xs);
+  color: var(--dem-muted);
+}
+.dem-review-rate .dem-review-key {
+  margin-left: 0;
+}
+.dem-review-rate[data-rating="again"] span {
+  color: var(--dem-danger-text);
+}
+.dem-review-page h2 {
+  margin: 0;
+  font-size: var(--dem-text-xl);
+}
+.dem-review-tally {
+  margin: 0;
+  color: var(--dem-muted);
+}
+.dem-review-sure h3 {
+  margin: 0 0 var(--dem-space-1);
+  font-size: var(--dem-text-sm);
+  font-weight: 500;
+  color: var(--dem-warn-text);
+}
+.dem-review-sure ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  font-family: var(--dem-font-long);
+}
